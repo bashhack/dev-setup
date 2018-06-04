@@ -16,7 +16,7 @@ function runDots() {
       echo "Syncing the dev-setup repo to your local machine."
       echo "-------------------------------"
       echo ""
-      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh}
+      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh}
     fi
     if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
       # Run the linuxprep.sh script
@@ -26,6 +26,15 @@ function runDots() {
       echo "-------------------------------"
       echo ""
       bash ./dev-setup/linuxprep.sh
+    fi
+    if [ $ARG == "coreapps" ] || [ $ARG == "all" ]; then
+      # Run the coreapps.sh script
+      echo ""
+      echo "-------------------------------"
+      echo "Installing core applications."
+      echo "-------------------------------"
+      echo ""
+      bash ./dev-setup/coreapps.sh
     fi
   done
 
