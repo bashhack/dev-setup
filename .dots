@@ -18,6 +18,15 @@ function runDots() {
       echo ""
       cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh}
     fi
+    if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
+      # Run the linuxprep.sh script
+      echo ""
+      echo "-------------------------------"
+      echo "Updating Linux and installing utilities."
+      echo "-------------------------------"
+      echo ""
+      ./linuxprep.sh
+    fi
   done
 
   echo "-------------------------------"
