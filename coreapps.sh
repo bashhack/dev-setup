@@ -6,6 +6,14 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Step 1
+# Install core editors
+sudo apt install vim -y
+sudo apt install emacs25 -y
+mv .emacs.d .emacs.d.bak
+mv .emacs .emacs.bak
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
 ## Languages
 # Python
 # Node/NVM

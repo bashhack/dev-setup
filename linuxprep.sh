@@ -21,14 +21,8 @@ sudo apt install clang -y
 sudo apt install gcc -y
 
 # Step 3
-# Install core editors
-sudo apt install vim -y
-sudo apt install emacs25 -y
-
-# Step 4
 # Install Ubuntu addons
 sudo apt install gnome-tweak-tool -y
 sudo apt install tlp tlp-rdw -y
 sudo apt install tp-smapi-dkms acpi-call-dkms smartmontools -y
 sudo tlp start
-
