@@ -2,4 +2,3 @@
 bootstrap.sh
 README.rst
 LICENSE
-rsync_exclude_list.txt
