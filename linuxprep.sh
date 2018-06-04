@@ -16,10 +16,23 @@ sudo apt upgrade -y
 sudo apt install build-essential -y
 sudo apt install git -y
 sudo apt install tmux -y
+sudo apt install wget -y
 sudo apt install curl -y
 sudo apt install cmake -y
+sudo apt install make -y
 sudo apt install clang -y
 sudo apt install gcc -y
+sudo apt install llvm -y
+sudo apt install libssl-dev -y
+sudo apt install zlib1g-dev -y
+sudo apt install libbz2-dev -y
+sudo apt install libreadline-dev -y
+sudo apt install libsqlite3-dev -y
+sudo apt install libncurses5-dev -y
+sudo apt install libncursesw5-dev -y
+sudo apt install xz-utils -y
+sudo apt install tk-dev -y
+
 
 # Step 3
 # Install Ubuntu addons
