@@ -10,9 +10,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install core editors
 sudo apt install vim -y
 sudo apt install emacs25 -y
+## Spacemacs
 mv .emacs.d .emacs.d.bak
 mv .emacs .emacs.bak
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 ## Languages
 # Python

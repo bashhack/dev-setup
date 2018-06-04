@@ -15,6 +15,7 @@ sudo apt upgrade -y
 # Install developer tools
 sudo apt install build-essential -y
 sudo apt install git -y
+sudo apt install tmux -y
 sudo apt install curl -y
 sudo apt install cmake -y
 sudo apt install clang -y
