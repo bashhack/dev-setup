@@ -25,7 +25,7 @@ function runDots() {
       echo "Updating Linux and installing utilities."
       echo "-------------------------------"
       echo ""
-      bash ./linuxprep.sh
+      bash ./dev-setup/linuxprep.sh
     fi
   done
 
