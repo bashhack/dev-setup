@@ -8,5 +8,5 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Step 1
 # Install all available updates
-apt update -y
-apt upgrade -y
+sudo apt update -y
+sudo apt upgrade -y

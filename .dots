@@ -16,7 +16,7 @@ function runDots() {
       echo "Syncing the dev-setup repo to your local machine."
       echo "-------------------------------"
       echo ""
-      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh}
+      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh}
     fi
     if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
       # Run the linuxprep.sh script
