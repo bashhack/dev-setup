@@ -16,7 +16,7 @@ function runDots() {
       echo "Syncing the dev-setup repo to your local machine."
       echo "-------------------------------"
       echo ""
-      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh}
+      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh,pydev.sh,nodedev.sh,misclang.sh,datastores.sh}
     fi
     if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
       # Run the linuxprep.sh script
@@ -36,12 +36,48 @@ function runDots() {
       echo ""
       bash ./dev-setup/coreapps.sh
     fi
+    if [ $ARG == "pydev" ] || [ $ARG == "all" ]; then
+        # Run the pydev.sh script
+        echo ""
+        echo "-------------------------------"
+        echo "Installing Python dev tools."
+        echo "-------------------------------"
+        echo ""
+        bash ./dev-setup/pydev.sh
+    fi
+    if [ $ARG == "nodedev" ] || [ $ARG == "all" ]; then
+        # Run the nodedev.sh script
+        echo ""
+        echo "-------------------------------"
+        echo "Installing Node dev tools."
+        echo "-------------------------------"
+        echo ""
+        bash ./dev-setup/nodedev.sh
+    fi
+    if [ $ARG == "misclang" ] || [ $ARG == "all" ]; then
+        # Run the misclang.sh script
+        echo ""
+        echo "-------------------------------"
+        echo "Installing miscellaneous programming languages."
+        echo "-------------------------------"
+        echo ""
+        bash ./dev-setup/misclang.sh
+    fi
+    if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
+        # Run the datastores.sh script
+        echo ""
+        echo "-------------------------------"
+        echo "Installing datastores."
+        echo "-------------------------------"
+        echo ""
+        bash ./dev-setup/datastores.sh
+    fi
   done
 
   echo "-------------------------------"
   echo "Completed running .dots, restart your computer to ensure all updates take effect"
   echo "-------------------------------"
-}    
+}
 
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 echo "";

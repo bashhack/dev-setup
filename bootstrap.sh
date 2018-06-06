@@ -11,6 +11,10 @@ function doIt() {
 	    --exclude='bootstrap.sh' \
 	    --exclude='linuxprep.sh' \
 	    --exclude='coreapps.sh' \
+	    --exclude='pydev.sh' \
+	    --exclude='nodedev.sh' \
+	    --exclude='misclang.sh' \
+	    --exclude='datastores.sh' \
 	    -avh --no-perms . ~;
     source ~/.bash_profile;
 }
