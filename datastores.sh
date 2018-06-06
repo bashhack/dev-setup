@@ -77,3 +77,9 @@ sudo apt install -y postgresql postgresql-contrib
 # sudo -i -u newusername
 # NOTE: Test new config
 # psql -d dbname
+
+# Redis
+sudo apt install redis
+sudo systemctl daemon-reload
+sudo systemctl enable redis
+sudo systemctl start redis
