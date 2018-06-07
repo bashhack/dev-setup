@@ -19,6 +19,14 @@ pyenv install 3.6.5
 pyenv install 3.7-dev
 pyenv global 3.6.5
 echo "$SHELL"
-echo "------------------------------"
-echo "Global Python version is: `pyenv version`"
-echo "------------------------------"
+
+# TODO: Install global code quality tools
+pip install python-language-server
+pip install pyls-sort
+pip install pyls-mypy
+pip install flake8
+pip install yapf
+pip install autoflake
+pip install isort
+pip install importmagic
+pip install epc

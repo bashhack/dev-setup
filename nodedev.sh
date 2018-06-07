@@ -25,3 +25,7 @@ echo "$SHELL"
 nvm install 9.4.0
 echo "$SHELL"
 . ~/.nvm/nvm.sh
+
+npm i -g tern
+npm i -g eslint eslint-plugin-better eslint-plugin-fp eslint-plugin-import
+npm i -g eslint-config-cleanjs
