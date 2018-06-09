@@ -524,7 +524,9 @@ Feel free to follow me [here](https://open.spotify.com/user/laughtonm?si=6TXPoQ0
 
 ### Pyenv
 
-[pyenv](https://github.com/pyenv/pyenv) is used to manage multiple versions of Python on the system without modification of the system Python 2 or Python 3 installations:
+[pyenv](https://github.com/pyenv/pyenv) is used to manage multiple versions of Python on the system without modification of the system Python 2 or Python 3 installations.
+
+#### Usage
 
 To switch to the Python 2 virtual environment, run the following `pyenv` command:
 
@@ -557,6 +559,197 @@ Note that you'll need pyenv's shell integration enabled (step 3 of the installat
 ### Pipenv
 
 [pipenv](https://github.com/pypa/pipenv) by [Kenneth Reitz](https://github.com/kennethreitz) is used for managing the core of the Python development workflows on the system.
+
+#### Usage
+
+Combining the benefits of `pip` and `virtualenv`, basic utilization of `pipenv` is simple and intuitive.
+
+To create a new project using a specific version of Python:
+
+    $ pipenv --python 3.6
+
+To install all dependencies (including dev):
+
+    $ pipenv install --dev
+
+Show a graph of installed dependencies:
+
+    $ pipenv graph
+
+To install a local `setup.py`:
+
+    $ pipenv install -e
+
+To spawn a shell with virtual environment activated:
+
+    $ pipenv shell
+
+Deactivate virtual environment:
+
+    $ exit
+
+### Pipsi
+
+[Coming Soon]
+
+### Jupyter Notebook
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/jupyter.png">
+  <br/>
+</p>
+
+A language-agnostic HTML notebook application for Project Jupyter. Comprising of a web application and notebook documents, [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/index.html) provides a computing environment that can be used for developing, documenting, and executing code, as well as communicating the results.
+
+#### Installation
+
+Both the Jupyter Notebook and the [Calysto Hy](https://github.com/Calysto/calysto_hy) kernel (for Hy language development) are installed in `pydev.sh`.
+
+#### Usage
+
+For console-based development:
+
+    $ jupyter console  # default python3
+    $ jupyter console --kernel calysto_hy
+
+For notebook-based development:
+
+    $ jupyter notebook  # default python3
+    $ jupyter notebook  # change kernel in notebook
+
+### NumPy
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/numpy.png">
+  <br/>
+</p>
+
+NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs NumPy.  If you prefer to install it separately, run:
+
+    $ pip install numpy
+
+#### Usage
+
+Refer to the following [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/02.00-Introduction-to-NumPy.ipynb) by Jake VanderPlas.
+
+### Pandas
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/pandas.png">
+  <br/>
+</p>
+
+Pandas is a software library written for data manipulation and analysis in Python. Offers data structures and operations for manipulating numerical tables and time series.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs Pandas.  If you prefer to install it separately, run:
+
+    $ pip install pandas
+
+#### Usage
+
+Refer to the following [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/46cfb1c8b28edcdf543b4aabd59c0d5b7202236b/notebooks/03.00-Introduction-to-Pandas.ipynb) by Jake VanderPlas.
+
+### Matplotlib
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/matplotlib.png">
+  <br/>
+</p>
+
+Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs matplotlib.  If you prefer to install it separately, run:
+
+    $ pip install matplotlib
+
+#### Usage
+
+
+Refer to the following [Python Data Sciene Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/ccafda3da2b190f244867e9562edf3e4d6f5c883/notebooks/04.00-Introduction-To-Matplotlib.ipynb) by Jake VanderPlas.
+
+### Seaborn
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/seaborn.png">
+  <br/>
+</p>
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs matplotlib.  If you prefer to install it separately, run:
+
+    $ pip install seaborn
+
+#### Usage
+
+Refer to the following [Python Data Sciene Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/04.14-Visualization-With-Seaborn.ipynb) by Jake VanderPlas.
+
+### Scikit-learn
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/scikitlearn.png">
+  <br/>
+</p>
+
+Scikit-learn adds Python support for efficient versions of a large number of common machine learning algorithms. It has a clean, uniform, and streamlined API, and great documentation.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs Scikit-learn.  If you prefer to install it separately, run:
+
+    $ pip install scikit-learn
+
+#### Usage
+
+Refer to the following [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/e3a225725cbc5c35cfcd8f4139e6a6c11d3e08b7/notebooks/05.02-Introducing-Scikit-Learn.ipynb) by Jake VanderPlas.
+
+### SciPy
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/scipy.png">
+  <br/>
+</p>
+
+SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs SciPy.  If you prefer to install it separately, run:
+
+    $ pip install scipy
+
+#### Usage
+
+Refer to the following for information and examples: [SciPy Documentation](https://docs.scipy.org/doc/scipy/reference/)
+
+### Bokeh
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/bokeh.png">
+  <br/>
+</p>
+
+Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, but also deliver this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs Bokeh.  If you prefer to install it separately, run:
+
+    $ pip install bokeh
+
+#### Usage
+
+Refer to the following [Bokeh User Guide](https://bokeh.pydata.org/en/latest/docs/user_guide.html#userguide).
 
 ## Section 4: JavaScript Development
 
