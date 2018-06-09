@@ -259,3 +259,17 @@ Note that you'll need pyenv's shell integration enabled (step 3 of the installat
     $ export PYENV_VERSION=3.8-dev
 
 [Section 3: Python Development Packages](#section-3-python-development-packages) describes the installed packages and usage.
+
+### nodedev.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/nodejs.png">
+  <br/>
+</p>
+
+To set up a JavaScript web development environment, Run the `nodedev.sh` script:
+
+    $ ./nodedev.sh
+
+[Section 4: JavaScript Development Packages](#section-6-javascript-development-packages) describes the installed packages and usage.
+
