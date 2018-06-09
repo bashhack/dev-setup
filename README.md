@@ -273,3 +273,4 @@ To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 
 [Section 4: JavaScript Development Packages](#section-6-javascript-development-packages) describes the installed packages and usage.
 
+## Section 2: General Apps and Tools
