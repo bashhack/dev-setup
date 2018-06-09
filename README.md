@@ -315,3 +315,21 @@ To set up common data stores, run the `datastores.sh` script:
 [Section 7: Data Stores](#section-7-data-stores) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
+
+### Chromium
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/chromium.png">
+  <br/>
+</p>
+
+While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional features.
+
+### Terminal Customization
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/terminal.png">
+  <br/>
+</p>
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
