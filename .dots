@@ -16,7 +16,7 @@ function runDots() {
       echo "Syncing the dev-setup repo to your local machine."
       echo "-------------------------------"
       echo ""
-      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh,pydev.sh,nodedev.sh,misclang.sh,datastores.sh}
+      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh,pydev.sh,nodedev.sh,misclang.sh,aws.sh,datastores.sh}
     fi
     if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
       # Run the linuxprep.sh script
@@ -62,6 +62,15 @@ function runDots() {
         echo "-------------------------------"
         echo ""
         bash ./dev-setup/misclang.sh
+    fi
+    if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
+        # Run the aws.sh script
+        echo ""
+        echo "-------------------------------"
+        echo "Installing big data tools, AWS, and Heroku."
+        echo "-------------------------------"
+        echo ""
+        bash ./dev-setup/aws.sh
     fi
     if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
         # Run the datastores.sh script

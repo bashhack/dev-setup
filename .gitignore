@@ -1,0 +1,5 @@
+# Compiled Python files
+*.pyc
+
+# Repo scratch directory
+scratch/
