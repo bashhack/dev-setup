@@ -17,6 +17,7 @@ echo "Installing pyenv versions: 3.6.5, 3.7-dev"
 echo "------------------------------"
 pyenv install 3.6.5
 pyenv install 3.7-dev
+pyenv install 3.8-dev
 pyenv global 3.6.5
 echo "$SHELL"
 

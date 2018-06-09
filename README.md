@@ -246,4 +246,16 @@ Sets the global version of Python to be used in all shells by writing the versio
 
     $ pyenv global 3.7-dev
 
+Sets a shell-specific Python version by setting the PYENV_VERSION environment variable in your shell. This version overrides application-specific versions and the global version.
+
+    $ pyenv shell 3.8-dev
+
+When run without a version number, pyenv shell reports the current value of PYENV_VERSION. You can also unset the shell version:
+
+    $ pyenv shell --unset
+
+Note that you'll need pyenv's shell integration enabled (step 3 of the installation instructions) in order to use this command. If you prefer not to use shell integration, you may simply set the PYENV_VERSION variable yourself:
+
+    $ export PYENV_VERSION=3.8-dev
+
 [Section 3: Python Development Packages](#section-3-python-development-packages) describes the installed packages and usage.
