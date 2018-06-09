@@ -195,4 +195,28 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 You could also use `~/.extras` to override settings, functions, and aliases from the dots repository, although it’s probably better to [fork the dots repository](https://github.com/bashhack/dots/fork).
 
-### Start of linuxprep....
+### linuxprep.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tux.jpg">
+  <br/>
+</p>
+
+Run the `linuxprep.sh` script:
+
+    $ ./linuxprep.sh
+
+`linuxprep.sh` will first install all updates. Next, essential system and hardware utilities are installed.
+
+### coreapps.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/apps.png">
+  <br/>
+</p>
+
+Some of the apps installed by the `coreapps.sh` script include: Chromium, Spotify, fonts, system monitoring, Emacs, Vim, search tools (i.e., SilverSearcher, RipGrep), etc.
+
+Run the `coreapps.sh` script:
+
+    $ ./coreapps.sh
