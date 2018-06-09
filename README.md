@@ -323,7 +323,7 @@ To set up common data stores, run the `datastores.sh` script:
   <br/>
 </p>
 
-Although Emacs is our main editor, some basic Vim [Vim](http://www.vim.org/) configuration when you need it goes a long way .
+Although Emacs is our main editor, some basic [Vim](http://www.vim.org/) configuration when you need it goes a long way .
 
 I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
 
@@ -410,6 +410,10 @@ Search everything except JavaScript files:
   <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/neofetch.png">
   <br/>
 </p>
+
+Highly configurable shell bling to display system info - in other words, a better `screenfetch`.
+
+To disable `neofetch` on terminal startup, simply comment out `neofetch` from [.extras](https://raw.githubusercontent.com/bashhack/dots/master/.extras).
 
 ### Tree
 
