@@ -316,6 +316,65 @@ To set up common data stores, run the `datastores.sh` script:
 
 ## Section 2: General Apps and Tools
 
+### Git
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/git.png">
+  <br/>
+</p>
+
+What's a developer without [Git](http://git-scm.com/)?
+
+#### Installation
+
+Git should have been installed when you ran through the [linuxprep.sh script](#linuxprepsh-script).
+
+#### Configuration
+
+To check your version of Git, run the following command:
+
+    $ git --version
+
+And `$ which git` should output `/usr/bin/git`.
+
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig) file to your home directory:
+
+    $ cd ~
+    $ curl -O https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig
+
+It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
+
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email "your_email@youremail.com"
+
+They will get added to your `.gitconfig` file.
+
+To push code to your GitHub repositories, we're going to make use of [Krypton](https://krypt.co/), so you don't have to type your username and password everytime. Using this service, we also easily manage one set of credentials across multiple dev machines. Installation of Krypton occurs in the [linuxprep.sh script](#linuxprepsh-script), and does require additional setup via the `kr pair` command. Please ensure you have a mobile device with the Krypton app installed before configuration.
+
+### Tmux
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tmux.png">
+  <br/>
+</p>
+
+### Build Tools
+
+### Terminal Customization
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/terminal.png">
+  <br/>
+</p>
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) contains terminal customizations.
+
 ### Vim
 
 <p align="center">
@@ -325,7 +384,9 @@ To set up common data stores, run the `datastores.sh` script:
 
 Although Emacs is our main editor, some basic [Vim](http://www.vim.org/) configuration when you need it goes a long way .
 
-I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `vim`.
 
 #### Configuration
 
@@ -338,9 +399,13 @@ The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
   <br/>
 </p>
 
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `emacs`.
+
 #### Configuration
 
-The [bootstrap.sh script](#bootstrapsh-script) contains Emacs customizations. 
+The [bootstrap.sh script](#bootstrapsh-script) contains Emacs customizations.
 
 Notably, `dots` favors utilization of [Spacemacs](http://spacemacs.org/) for customization of Emacs. After years of homebrewing Emacs configs, a "set it and forget it" approach can be refreshing. For more info on the layers (or packages) installed, please see the [.spacemacs](https://raw.githubusercontent.com/bashhack/dots/master/.spacemacs) file.
 
@@ -456,7 +521,9 @@ Evoke using `htop` command.
   <br/>
 </p>
 
+While I don't have a need for much font customization, I do find [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/) quite visually appealing and works especially well with Spacemacs.
 
+Additionally, I tend to rely on the mega font pack [Nerd Fonts](https://nerdfonts.com/) for supporting certain features in Spacemacs, Vim, and tmux, as well as general system typography and iconograpy.
 
 ### Chromium
 
@@ -465,7 +532,7 @@ Evoke using `htop` command.
   <br/>
 </p>
 
-While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional browser features.
+Firefox is the default on Ubuntu 18.04, but installation of Chromium is useful for debugging and additional browser features.
 
 ### Spotify
 
@@ -474,64 +541,8 @@ While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful
   <br/>
 </p>
 
-### Terminal Customization
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/terminal.png">
-  <br/>
-</p>
-
-Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
-
-#### Configuration
-
-The [bootstrap.sh script](#bootstrapsh-script) contains terminal customizations.
-
-### Git
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/git.png">
-  <br/>
-</p>
-
-What's a developer without [Git](http://git-scm.com/)?
-
-#### Installation
-
-Git should have been installed when you ran through the [linuxprep.sh script](#linuxprepsh-script).
-
-#### Configuration
-
-To check your version of Git, run the following command:
-
-    $ git --version
-
-And `$ which git` should output `/usr/bin/git`.
-
-Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig) file to your home directory:
-
-    $ cd ~
-    $ curl -O https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig
-
-It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
-
-Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
-
-    $ git config --global user.name "Your Name Here"
-    $ git config --global user.email "your_email@youremail.com"
-
-They will get added to your `.gitconfig` file.
-
-To push code to your GitHub repositories, we're going to make use of [Krypton](https://krypt.co/), so you don't have to type your username and password everytime. Using this service, we also easily manage one set of credentials across multiple dev machines. Installation of Krypton occurs in the [linuxprep.sh script](#linuxprepsh-script), and does require additional setup via the `kr pair` command. Please ensure you have a mobile device with the Krypton app installed before configuration.
-
-### Tmux
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tmux.png">
-  <br/>
-</p>
-
-### Build Tools
+Essential listening.
+Feel free to follow me [here](https://open.spotify.com/user/laughtonm?si=6TXPoQ09TEmT9h_A-k7_XQ).
 
 ## Section 3: Python Development
 
