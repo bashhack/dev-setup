@@ -522,6 +522,10 @@ Feel free to follow me [here](https://open.spotify.com/user/laughtonm?si=6TXPoQ0
 
 ## Section 3: Python Development
 
+### Pyenv
+
+[pyenv](https://github.com/pyenv/pyenv) is used to manage multiple versions of Python on the system without modification of the system Python 2 or Python 3 installations:
+
 To switch to the Python 2 virtual environment, run the following `pyenv` command:
 
     $ pyenv local 2.7
@@ -530,26 +534,29 @@ To switch to the Python 3 virtual environment, run the following `pyenv` command
 
     $ pyenv local 3.6.5
 
-When run without a version number, pyenv local reports the currently configured local version. You can also unset the local version:
+When run without a version number, `pyenv local` reports the currently configured local version. You can also unset the local version:
 
     $ pyenv local --unset
 
-Sets the global version of Python to be used in all shells by writing the version name to the ~/.pyenv/version file. This version can be overridden by an application-specific .python-version file, or by setting the PYENV_VERSION environment variable.
+Sets the global version of Python to be used in all shells by writing the version name to the `~/.pyenv/version` file. This version can be overridden by an application-specific `.python-version` file, or by setting the `PYENV_VERSION` environment variable.
 
     $ pyenv global 3.7-dev
 
-Sets a shell-specific Python version by setting the PYENV_VERSION environment variable in your shell. This version overrides application-specific versions and the global version.
+Sets a shell-specific Python version by setting the `PYENV_VERSION` environment variable in your shell. This version overrides application-specific versions and the global version.
 
     $ pyenv shell 3.8-dev
 
-When run without a version number, pyenv shell reports the current value of PYENV_VERSION. You can also unset the shell version:
+When run without a version number, pyenv shell reports the current value of `PYENV_VERSION`. You can also unset the shell version:
 
     $ pyenv shell --unset
 
-Note that you'll need pyenv's shell integration enabled (step 3 of the installation instructions) in order to use this command. If you prefer not to use shell integration, you may simply set the PYENV_VERSION variable yourself:
+Note that you'll need pyenv's shell integration enabled (step 3 of the installation instructions) in order to use this command. If you prefer not to use shell integration, you may simply set the `PYENV_VERSION` variable yourself:
 
     $ export PYENV_VERSION=3.8-dev
 
+### Pipenv
+
+[pipenv](https://github.com/pypa/pipenv) by [Kenneth Reitz](https://github.com/kennethreitz) is used for managing the core of the Python development workflows on the system.
 
 ## Section 4: JavaScript Development
 
