@@ -32,7 +32,7 @@ sudo apt install libncurses5-dev -y
 sudo apt install libncursesw5-dev -y
 sudo apt install xz-utils -y
 sudo apt install tk-dev -y
-
+curl https://krypt.co/kr | sh
 
 # Step 3
 # Install Ubuntu addons

@@ -56,7 +56,7 @@ If you're interested in automation, `dots` provides a customizable [setup script
 * [Vim](#vim)
 * [Git](#git)
 
-## Section 3: Python development
+## Section 3: Python Development
 
 * [Python](#python)
 * [Pipenv](#pipenv)
@@ -260,7 +260,7 @@ Note that you'll need pyenv's shell integration enabled (step 3 of the installat
 
     $ export PYENV_VERSION=3.8-dev
 
-[Section 3: Python Development Packages](#section-3-python-development-packages) describes the installed packages and usage.
+[Section 3: Python Development](#section-3-python-development) describes the installed packages and usage.
 
 ### nodedev.sh script
 
@@ -273,7 +273,7 @@ To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 
     $ ./nodedev.sh
 
-[Section 4: JavaScript Development Packages](#section-4-javascript-development-packages) describes the installed packages and usage.
+[Section 4: Node.js Development](#section-4-node.js-development) describes the installed packages and usage.
 
 ### misclang.sh script
 
@@ -286,7 +286,7 @@ To set up a development environment to work additional languages (including Rust
 
     $ ./misclang.sh
 
-[Section 5: Additional Language Support](#section-5-additional-languages) describes the installed packages and usage.
+[Section 5: Additional Languages](#section-5-additional-languages) describes the installed packages and usage.
 
 ### aws.sh script
 
@@ -316,6 +316,46 @@ To set up common data stores, run the `datastores.sh` script:
 
 ## Section 2: General Apps and Tools
 
+### Vim
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/vim.png">
+  <br/>
+</p>
+
+Although Emacs is our main editor, some basic Vim [Vim](http://www.vim.org/) configuration when you need it goes a long way .
+
+I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
+
+### Emacs
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/emacs.png">
+  <br/>
+</p>
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) contains Emacs customizations. 
+
+Notably, `dots` favors utilization of [Spacemacs](http://spacemacs.org/) for customization of Emacs. After years of homebrewing Emacs configs, a "set it and forget it" approach can be refreshing. For more info on the layers (or packages) installed, please see the [.spacemacs](https://raw.githubusercontent.com/bashhack/dots/master/.spacemacs) file.
+
+### AG (Silver Searcher)
+
+### RipGrep
+
+### Neofetch
+
+### Tree
+
+### HTOP
+
+### Fonts
+
 ### Chromium
 
 <p align="center">
@@ -325,6 +365,8 @@ To set up common data stores, run the `datastores.sh` script:
 
 While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional features.
 
+### Spotify
+
 ### Terminal Customization
 
 <p align="center">
@@ -333,3 +375,78 @@ While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful
 </p>
 
 Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) contains terminal customizations.
+
+### Git
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/git.png">
+  <br/>
+</p>
+
+What's a developer without [Git](http://git-scm.com/)?
+
+#### Installation
+
+Git should have been installed when you ran through the [linuxprep.sh script](#linuxprepsh-script).
+
+#### Configuration
+
+To check your version of Git, run the following command:
+
+    $ git --version
+
+And `$ which git` should output `/usr/bin/git`.
+
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig) file to your home directory:
+
+    $ cd ~
+    $ curl -O https://raw.githubusercontent.com/bashhack/dots/master/.gitconfig
+
+It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
+
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email "your_email@youremail.com"
+
+They will get added to your `.gitconfig` file.
+
+To push code to your GitHub repositories, we're going to make use of [Krypton](https://krypt.co/), so you don't have to type your username and password everytime. Using this service, we also easily manage one set of credentials across multiple dev machines. Installation of Krypton occurs in the [linuxprep.sh script](#linuxprepsh-script), and does require additional setup via the `kr pair` command. Please ensure you have a mobile device with the Krypton app installed before configuration.
+
+### Tmux
+
+### Build Tools
+
+## Section 3: Python Development
+
+## Section 4: Node.js Development
+
+## Section 5: Additional Languages
+
+## Section 6: Big Data, AWS, and Heroku
+
+## Section 7: Data Stores
+
+## Section 8: Misc
+
+### Credits
+
+See the [Credits Page](https://github.com/bashhack/dots/blob/master/CREDITS.md).
+
+### License
+
+This repository contains a variety of content; some developed by bashhack (Marc Laughton), and some from third-parties. The third-party content is distributed under the license provided by those parties.
+
+The content developed by bashhack (Marc Laughton) is distributed under the following license:
+
+    Copyright 2018 bashhack (Marc Laughton)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
