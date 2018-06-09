@@ -346,15 +346,91 @@ Notably, `dots` favors utilization of [Spacemacs](http://spacemacs.org/) for cus
 
 ### AG (Silver Searcher)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/silversearcher.png">
+  <br/>
+</p>
+
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `ag`.
+
+#### Configuration
+
+No additional setup required, it's like `ack` but much faster and written in C. Under the hood, it uses `Pthreads` enabling multi-processing (i.e., using multiple CPU cores).
+
 ### RipGrep
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/ripgrep.png">
+  <br/>
+</p>
+
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `rg`.
+
+#### Configuration
+
+No additional setup required - it's a hybrid between `ag` (`ack` clone) with GNU `grep`, faster then either and written in Rust.
+
+#### Usage
+
+Examples of basic operations are shown below.
+
+To recursively search the current directory, while respecting `.gitignore` files, hidden files, and binary files:
+
+    $ rg foobar
+
+To ignore all ignore files, use `-u`. To additionally search hidden files and directories, use `-uu`. To additionally search binary files, use `-uuu`.
+In particular, `rg -uuu` is similar to `grep -a -r`.
+
+    $ rg -uu foobar
+    $ rg -uuu foobar
+
+Search only files matching a particular glob:
+
+    $ rg foo -g 'README.*'
+
+Or, exclude files matching a particular glob:
+
+    $ rg foo -g '!*.min.js'
+
+Search only HTML and CSS files:
+
+    $ rg -thtml -tcss foobar
+
+Search everything except JavaScript files:
+
+    $ rg -Tjs foobar
 
 ### Neofetch
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/neofetch.png">
+  <br/>
+</p>
+
 ### Tree
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tree.png">
+  <br/>
+</p>
 
 ### HTOP
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/htop.png">
+  <br/>
+</p>
+
 ### Fonts
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/fonts.png">
+  <br/>
+</p>
 
 ### Chromium
 
@@ -366,6 +442,11 @@ Notably, `dots` favors utilization of [Spacemacs](http://spacemacs.org/) for cus
 While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional features.
 
 ### Spotify
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/spotify.png">
+  <br/>
+</p>
 
 ### Terminal Customization
 
@@ -419,6 +500,11 @@ To push code to your GitHub repositories, we're going to make use of [Krypton](h
 
 ### Tmux
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tmux.png">
+  <br/>
+</p>
+
 ### Build Tools
 
 ## Section 3: Python Development
@@ -439,7 +525,8 @@ See the [Credits Page](https://github.com/bashhack/dots/blob/master/CREDITS.md).
 
 ### License
 
-This repository contains a variety of content; some developed by bashhack (Marc Laughton), and some from third-parties. The third-party content is distributed under the license provided by those parties.
+This repository contains a variety of content; some developed by bashhack (Marc Laughton), and some from third-parties.
+The third-party content is distributed under the license provided by those parties.
 
 The content developed by bashhack (Marc Laughton) is distributed under the following license:
 
