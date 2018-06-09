@@ -37,11 +37,11 @@ sudo apt install sbcl -y
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.exports
 echo 'eval "$(rbenv init -)"' >> ~/.exports
-echo "$SHELL"
+. ~/.bashrc
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.exports
-echo "$SHELL"
+. ~/.bashrc
 
 rbenv install 2.5.1
 rbenv global 2.5.1

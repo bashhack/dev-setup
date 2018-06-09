@@ -21,7 +21,6 @@ pyenv install 3.7-dev
 pyenv install 3.8-dev
 pyenv global 3.6.5
 
-# TODO: Install global code quality tools
 pip install python-language-server
 pip install pyls-sort
 pip install pyls-mypy

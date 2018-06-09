@@ -20,12 +20,9 @@ echo "------------------------------"
 echo ""
 . ~/.nvm/nvm.sh
 nvm install 10.3.0
-echo "$SHELL"
 . ~/.nvm/nvm.sh
 nvm install 9.4.0
-echo "$SHELL"
 . ~/.nvm/nvm.sh
-
 npm i -g tern
 npm i -g eslint eslint-plugin-better eslint-plugin-fp eslint-plugin-import
 npm i -g eslint-config-cleanjs
