@@ -230,35 +230,11 @@ Run the `coreapps.sh` script:
   <br/>
 </p>
 
-This will install [pyenv](#pyenv) and [pipenv](#pipenv).  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
+This will install [pyenv](#pyenv), [pipenv](#pipenv) and associated packages.  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
 
-To switch to the Python 2 virtual environment, run the following `pyenv` command:
+Run the `pydev.sh` script:
 
-    $ pyenv local 2.7
-
-To switch to the Python 3 virtual environment, run the following `pyenv` command:
-
-    $ pyenv local 3.6.5
-
-When run without a version number, pyenv local reports the currently configured local version. You can also unset the local version:
-
-    $ pyenv local --unset
-
-Sets the global version of Python to be used in all shells by writing the version name to the ~/.pyenv/version file. This version can be overridden by an application-specific .python-version file, or by setting the PYENV_VERSION environment variable.
-
-    $ pyenv global 3.7-dev
-
-Sets a shell-specific Python version by setting the PYENV_VERSION environment variable in your shell. This version overrides application-specific versions and the global version.
-
-    $ pyenv shell 3.8-dev
-
-When run without a version number, pyenv shell reports the current value of PYENV_VERSION. You can also unset the shell version:
-
-    $ pyenv shell --unset
-
-Note that you'll need pyenv's shell integration enabled (step 3 of the installation instructions) in order to use this command. If you prefer not to use shell integration, you may simply set the PYENV_VERSION variable yourself:
-
-    $ export PYENV_VERSION=3.8-dev
+    $ ./pydev.sh
 
 [Section 3: Python Development](#section-3-python-development) describes the installed packages and usage.
 
@@ -545,6 +521,35 @@ Essential listening.
 Feel free to follow me [here](https://open.spotify.com/user/laughtonm?si=6TXPoQ09TEmT9h_A-k7_XQ).
 
 ## Section 3: Python Development
+
+To switch to the Python 2 virtual environment, run the following `pyenv` command:
+
+    $ pyenv local 2.7
+
+To switch to the Python 3 virtual environment, run the following `pyenv` command:
+
+    $ pyenv local 3.6.5
+
+When run without a version number, pyenv local reports the currently configured local version. You can also unset the local version:
+
+    $ pyenv local --unset
+
+Sets the global version of Python to be used in all shells by writing the version name to the ~/.pyenv/version file. This version can be overridden by an application-specific .python-version file, or by setting the PYENV_VERSION environment variable.
+
+    $ pyenv global 3.7-dev
+
+Sets a shell-specific Python version by setting the PYENV_VERSION environment variable in your shell. This version overrides application-specific versions and the global version.
+
+    $ pyenv shell 3.8-dev
+
+When run without a version number, pyenv shell reports the current value of PYENV_VERSION. You can also unset the shell version:
+
+    $ pyenv shell --unset
+
+Note that you'll need pyenv's shell integration enabled (step 3 of the installation instructions) in order to use this command. If you prefer not to use shell integration, you may simply set the PYENV_VERSION variable yourself:
+
+    $ export PYENV_VERSION=3.8-dev
+
 
 ## Section 4: JavaScript Development
 
