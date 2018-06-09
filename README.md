@@ -44,6 +44,8 @@ If you're interested in automation, `dots` provides a customizable [setup script
     * Sets up modern and minimal Node.js development toolchain
 * [misclang.sh script](#misclangsh-script)
     * Sets up additional programming languages and their dev environments
+* [aws.sh script](#awssh-script)
+    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
 * [datastores.sh script](#datastoressh-script)
     * Sets up common data stores
 
@@ -271,6 +273,45 @@ To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 
     $ ./nodedev.sh
 
-[Section 4: JavaScript Development Packages](#section-6-javascript-development-packages) describes the installed packages and usage.
+[Section 4: JavaScript Development Packages](#section-4-javascript-development-packages) describes the installed packages and usage.
+
+### misclang.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/misclangs.png">
+  <br/>
+</p>
+
+To set up a development environment to work additional languages (including Rust, Scheme, Clojure, Haskell, etc.), run the `misclang.sh` script:
+
+    $ ./misclang.sh
+
+[Section 5: Additional Language Support](#section-5-additional-languages) describes the installed packages and usage.
+
+### aws.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws.png">
+  <br/>
+</p>
+
+To set up a development environment to work with Spark, Hadoop MapReduce, and Amazon Web Services, run the `aws.sh` script:
+
+    $ ./aws.sh
+
+[Section 6: Big Data, AWS, and Heroku](#section-6-big-data-aws-and-heroku) describes the installed packages and usage.
+
+### datastores.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/datastores.png">
+  <br/>
+</p>
+
+To set up common data stores, run the `datastores.sh` script:
+
+    $ ./datastores.sh
+
+[Section 7: Data Stores](#section-7-data-stores) describes the installed packages and usage.
 
 ## Section 2: General Apps and Tools
