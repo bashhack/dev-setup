@@ -220,3 +220,30 @@ Some of the apps installed by the `coreapps.sh` script include: Chromium, Spotif
 Run the `coreapps.sh` script:
 
     $ ./coreapps.sh
+
+### pydev.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/python.png">
+  <br/>
+</p>
+
+This will install [pyenv](#pyenv) and [pipenv](#pipenv).  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
+
+To switch to the Python 2 virtual environment, run the following `pyenv` command:
+
+    $ pyenv local 2.7
+
+To switch to the Python 3 virtual environment, run the following `pyenv` command:
+
+    $ pyenv local 3.6.5
+
+When run without a version number, pyenv local reports the currently configured local version. You can also unset the local version:
+
+    $ pyenv local --unset
+
+Sets the global version of Python to be used in all shells by writing the version name to the ~/.pyenv/version file. This version can be overridden by an application-specific .python-version file, or by setting the PYENV_VERSION environment variable.
+
+    $ pyenv global 3.7-dev
+
+[Section 3: Python Development Packages](#section-3-python-development-packages) describes the installed packages and usage.
