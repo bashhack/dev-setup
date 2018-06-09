@@ -11,7 +11,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Cloud services**: Amazon Web Services and Heroku
 * **Big data, AI/ML**: Apache Spark, MapReduce, etc
 * **Common data stores**: PostgreSQL, Redis, and Elasticsearch
-* **Javascript web development**: Node.js, ESLint, etc
+* **Javascript development**: Node.js, ESLint, etc
 
 ### But...I Don't Need All These Tools!
 
@@ -41,7 +41,7 @@ If you're interested in automation, `dots` provides a customizable [setup script
 * [pydev.sh script](#pydevsh-script)
     * Sets up comprehensive, modern Python development toolchain
 * [nodedev.sh script](#nodedevsh-script)
-    * Sets up modern and minimal Node.js development toolchain
+    * Sets up modern and minimal JavaScript development toolchain
 * [misclang.sh script](#misclangsh-script)
     * Sets up additional programming languages and their dev environments
 * [aws.sh script](#awssh-script)
@@ -61,7 +61,7 @@ If you're interested in automation, `dots` provides a customizable [setup script
 * [Python](#python)
 * [Pipenv](#pipenv)
 
-## Section 4: Node.js Development
+## Section 4: JavaScript Development
 
 * [Node.js](#nodejs)
 * [ESLint](#eslint)
@@ -146,7 +146,7 @@ Example of cherry picking packages on your needs:
 * [pydev.sh](https://github.com/bashhack/dots/blob/master/pydev.sh)
     * Sets up comprehensive, modern Python development toolchain
 * [nodedev.sh script](https://github.com/bashhack/dots/blob/master/nodedev.sh)
-    * Sets up modern and minimal Node.js development toolchain
+    * Sets up modern and minimal JavaScript development toolchain
 * [misclang.sh script](https://github.com/bashhack/dots/blob/master/misclang.sh)
     * Sets up additional programming languages and their dev environments
 * [aws.sh](https://github.com/bashhack/dots/blob/master/aws.sh)
@@ -273,7 +273,7 @@ To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 
     $ ./nodedev.sh
 
-[Section 4: Node.js Development](#section-4-node.js-development) describes the installed packages and usage.
+[Section 4: JavaScript Development](#section-4-javascript-development) describes the installed packages and usage.
 
 ### misclang.sh script
 
@@ -423,7 +423,7 @@ To push code to your GitHub repositories, we're going to make use of [Krypton](h
 
 ## Section 3: Python Development
 
-## Section 4: Node.js Development
+## Section 4: JavaScript Development
 
 ## Section 5: Additional Languages
 
