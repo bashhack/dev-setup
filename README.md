@@ -422,12 +422,32 @@ To disable `neofetch` on terminal startup, simply comment out `neofetch` from [.
   <br/>
 </p>
 
+A recursive directory listing program for Unix systems, outputting a depth-indented listing of files.
+
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `tree`.
+
+#### Usage
+
+Use `tree` to output all visible files and directories, and `tree -a` to include hidden file content.
+
 ### HTOP
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/htop.png">
   <br/>
 </p>
+
+A simple, interactive system monitor for process viewing and management.
+
+#### Installation
+
+The [linuxprep.sh script](#linuxprepsh-script) will install `tree`.
+
+#### Usage
+
+Evoke using `htop` command.
 
 ### Fonts
 
@@ -436,6 +456,8 @@ To disable `neofetch` on terminal startup, simply comment out `neofetch` from [.
   <br/>
 </p>
 
+
+
 ### Chromium
 
 <p align="center">
@@ -443,7 +465,7 @@ To disable `neofetch` on terminal startup, simply comment out `neofetch` from [.
   <br/>
 </p>
 
-While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional features.
+While Firefox is the default on Ubuntu 18.04, installation of Chromium is useful for debugging and additional browser features.
 
 ### Spotify
 
