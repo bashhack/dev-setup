@@ -592,6 +592,10 @@ Deactivate virtual environment:
 
 [Coming Soon]
 
+### Python Language Server
+
+[Coming Soon]
+
 ### Jupyter Notebook
 
 <p align="center">
@@ -790,14 +794,76 @@ In any directory, setting a version in a `.nvmrc` file and running `nvm use` wil
 
 ### Tern
 
+A code-analysis engine for JavaScript. Many code editors can utilize its features:
+
+  - Autocompletion on variables and properties
+  - Function argument hints
+  - Querying the type of an expression
+  - Finding the definition of something
+  - Automatic refactoring
+
+For more information, see the official [Tern Reference Manual](http://ternjs.net/doc/manual.html).
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) installs a basic `.tern-project` configuration file. For editing and options, please refer to Tern's documentation.
+
 ### ESLint
 
+Friends don't let friends go without a robust and flexible linting solution. Just like our python development environment includes a suite of code-quality tools, we have included ESLint here to ensure that JavaScript code written on the system conforms to best-practice.
+
+#### Configuration
+
+I opt for a strict [ESLint](https://eslint.org/) configuration that enforces key functional programming paradigms and methodologies. Many find that Airbnb has a suitable config for their needs, but I encourage you to explore what works for you. The [bootstrap.sh script](#bootstrapsh-script) installs the `.eslintrc` used to set the ESLint config, should you need to make changes do so there.
+
+For more info on the config I use, see [eslint-config-cleanjs](https://github.com/bodil/eslint-config-cleanjs).
 
 ## Section 5: Additional Languages
+
+### Rust
+
+[Coming Soon]
+
+### Haskell
+
+[Coming Soon]
+
+### Java
+
+[Coming Soon]
+
+### Clojure
+
+[Coming Soon]
+
+### Scheme
+
+[Coming Soon]
+
+### Common Lisp
+
+[Coming Soon]
+
+### Ruby
+
+[Coming Soon]
+
 
 ## Section 6: Big Data, AWS, and Heroku
 
 ## Section 7: Data Stores
+
+### PostgreSQL
+
+[Coming Soon]
+
+### Redis
+
+[Coming Soon]
+
+### Elasticsearch
+
+[Coming Soon]
 
 ## Section 8: Misc
 
