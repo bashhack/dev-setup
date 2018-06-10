@@ -972,6 +972,8 @@ To launch a REPL:
 
     $ scheme
 
+For compilation and app distribution, refer to [Section 2.8. Building and Distributing Applications](https://cisco.github.io/ChezScheme/csug9.5/use.html#./use:h8).
+
 ### Common Lisp
 
 #### Installation
@@ -986,6 +988,8 @@ To launch a REPL:
 
     $ sbcl
 
+For compilation and app distribution, I really like [Roswell](https://github.com/roswell/roswell) though [Buildapp](https://www.xach.com/lisp/buildapp/) is great, too!
+
 ### Ruby
 
 #### Installation
@@ -995,6 +999,8 @@ To launch a REPL:
 Ruby is installed via [rbenv](https://github.com/rbenv/rbenv), a Ruby version manager like `nvm` suitable for handling multiple active versions and any installed gems.
 
 #### Usage
+
+I almost never write Ruby anymore, nor do I tend to need its REPL (run `irb`, if interested). However, it is installed and used as a dependency for other system requirements (i.e., `foreman`, `gulp-sass`, etc.).
 
 ## Section 6: Big Data, AWS, and Heroku
 
