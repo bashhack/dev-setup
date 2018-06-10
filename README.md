@@ -826,6 +826,39 @@ For more info on the config I use, see [eslint-config-cleanjs](https://github.co
 
 [Rust](https://www.rust-lang.org/en-US/) is installed by [misclang.sh script](#misclangsh-script).
 
+#### Usage
+
+To access documentation:
+
+    $ rustup doc
+
+To update Rust:
+
+    $ rustup update
+
+For basic one-off compiling (a la `gcc` or `clang`):
+
+    $ rustc main.rs
+
+The heart of the Rust toolchain is [Cargo](https://doc.rust-lang.org/cargo/getting-started/first-steps.html). For most projects, we won't be directly compiling via `rustc`, but will instead using Cargo to build, manage, and test our code and its dependencies.
+
+To create a new project:
+
+    $ cargo new project_name --bin  # or --lib
+
+To compile and run the newly created project:
+
+    $ cargo build
+    $ ./target/debug/project_name
+
+Or, we can use the `run` command to both compile and run in a single command:
+
+    $ cargo run
+
+To create a release build:
+
+    $ cargo build --release  # will put binary in target/release instead of target/debug
+
 ### Haskell
 
 #### Installation
@@ -834,11 +867,39 @@ For more info on the config I use, see [eslint-config-cleanjs](https://github.co
 
 Haskell is installed via [Stack](https://docs.haskellstack.org/en/stable/README/), the defacto build tool and environment manager on this system and within the community at large.
 
+#### Usage
+
+To create a new project directory:
+
+    $ stack new project-name
+
+Within the newly created project directory, we can install the GHC:
+
+    $ stack setup
+
+To build the minimal project:
+
+    $ stack build
+
+To execute the command:
+
+    $ stack exec my-project-exe
+
+To launch a REPL:
+
+    $ stack ghci
+
 ### Java
 
 #### Installation
 
 [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html) is installed by [misclang.sh script](#misclangsh-script).
+
+#### Usage
+
+Start a Clojure REPL....
+
+But seriously, we have this installed because Clojure targets the JVM, as does Lucene (i.e., search library used by Elasticsearch).
 
 ### Clojure
 
@@ -848,6 +909,55 @@ Haskell is installed via [Stack](https://docs.haskellstack.org/en/stable/README/
 
 Clojure is installed via [Leiningen](https://leiningen.org/), the defacto build tool and environment manager on this system and within the community at large.
 
+#### Usage
+
+NOTE: I use Leiningen over Boot for a host of reasons, but should Boot be your thing - see the [Boot Wiki](https://github.com/boot-clj/boot/wiki).
+
+To create a new project:
+
+    $ lein new app my-project  # omit app if building a library
+
+Edit project dependencies in `project.clj`, as needed.
+
+To launch a REPL:
+
+    $ lein repl
+
+To execute the program:
+
+    $ lein run
+
+For long-running processes, we can save memory by exiting the Leiningen JVM before launching our project's JVM:
+
+    $ lein trampoline run
+
+To run tests:
+
+    $ lein test
+
+### ClojureScript
+
+#### Installation
+
+We need no other installation steps beyond having Clojure installed.
+
+#### Usage
+
+To start a new project:
+
+    $ lein new figwheel my-project
+    $ lein new figwheel my-project -- --om
+    $ lein new figwheel my-project -- --reagent
+    $ cd my-project
+    $ lein figwheel
+
+Open a browser, navigate to `localhost:3449`. Open the project code, edit `hello-world` in `src/hello_world/core.cljs`. Save the file, and the changes should be reflected immediately.
+
+To add [Devcards](https://github.com/bhauman/devcards) support, add it as a dependency in `project.clj`. As an example:
+
+    [org.clojure/clojurescript "1.10.238"]
+    [devcards "0.2.5"]
+
 ### Scheme
 
 #### Installation
@@ -855,6 +965,12 @@ Clojure is installed via [Leiningen](https://leiningen.org/), the defacto build 
 [Scheme](https://cisco.github.io/ChezScheme/) is installed by [misclang.sh script](#misclangsh-script).
 
 While many Scheme implementations are available, including Chicken, Racket, GNU Guile, etc., I opt for and recommend Chez Scheme written by [R. Kent Dybvig](https://www.cs.indiana.edu/~dyb/). For those familiar with the history of Chez Scheme - most notably, its relationship to CISCO - fear not, Chez Scheme is now open source. No need to shell out $4000 anymore to enjoy the world's fastest Scheme implementation and what is, perhaps, the most beautiful compiler ever written.
+
+#### Usage
+
+To launch a REPL:
+
+    $ scheme
 
 ### Common Lisp
 
@@ -864,6 +980,12 @@ While many Scheme implementations are available, including Chicken, Racket, GNU 
 
 Like Scheme, there are many implementations of Common Lisp to choose from. I opt for SBCL (out of Carnegie Melon) because of its speed, type inference, debugger, and robustness for production code. I do NOT recommend this for casual use - where I would instead suggest [CCL](https://ccl.clozure.com/).
 
+#### Usage
+
+To launch a REPL:
+
+    $ sbcl
+
 ### Ruby
 
 #### Installation
@@ -871,6 +993,8 @@ Like Scheme, there are many implementations of Common Lisp to choose from. I opt
 [Ruby](https://www.ruby-lang.org/en/) is installed by [misclang.sh script](#misclangsh-script).
 
 Ruby is installed via [rbenv](https://github.com/rbenv/rbenv), a Ruby version manager like `nvm` suitable for handling multiple active versions and any installed gems.
+
+#### Usage
 
 ## Section 6: Big Data, AWS, and Heroku
 
