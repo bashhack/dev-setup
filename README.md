@@ -822,32 +822,51 @@ For more info on the config I use, see [eslint-config-cleanjs](https://github.co
 
 ### Rust
 
-[Coming Soon]
+#### Installation
+
+[Rust](https://www.rust-lang.org/en-US/) is installed by [misclang.sh script](#misclangsh-script).
 
 ### Haskell
 
-[Coming Soon]
+#### Installation
+
+[Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/) is installed by [misclang.sh script](#misclangsh-script).
+
+Haskell is installed via [Stack](https://docs.haskellstack.org/en/stable/README/), the defacto build tool and environment manager on this system and within the community at large.
 
 ### Java
 
-[Coming Soon]
+#### Installation
+
+[Java 8](https://docs.oracle.com/javase/8/docs/api/index.html) is installed by [misclang.sh script](#misclangsh-script).
 
 ### Clojure
 
-[Coming Soon]
+#### Installation
+
+[Clojure](https://clojure.github.io/clojure/) is installed by [misclang.sh script](#misclangsh-script).
+
+Clojure is installed via [Leiningen](https://leiningen.org/), the defacto build tool and environment manager on this system and within the community at large.
 
 ### Scheme
 
-[Coming Soon]
+#### Installation
+
+[Scheme](https://cisco.github.io/ChezScheme/) is installed by [misclang.sh script](#misclangsh-script).
+
+While many Scheme implementations are available, including Chicken, Racket, GNU Guile, etc., I opt for and recommend Chez Scheme written by [R. Kent Dybvig](https://www.cs.indiana.edu/~dyb/). For those familiar with the history of Chez Scheme - most notably, its relationship to CISCO - fear not, Chez Scheme is now open source. No need to shell out $4000 anymore to enjoy the world's fastest Scheme implementation and what is, perhaps, the most beautiful compiler ever written.
 
 ### Common Lisp
 
-[Coming Soon]
+#### Installation
+
+[Common Lisp (SBCL)](http://www.sbcl.org/) is installed by [misclang.sh script](#misclangsh-script).
 
 ### Ruby
 
-[Coming Soon]
+#### Installation
 
+[Rust](https://www.rust-lang.org/en-US/) is installed by [misclang.sh script](#misclangsh-script).
 
 ## Section 6: Big Data, AWS, and Heroku
 
