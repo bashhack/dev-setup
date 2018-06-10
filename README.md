@@ -753,6 +753,46 @@ Refer to the following [Bokeh User Guide](https://bokeh.pydata.org/en/latest/doc
 
 ## Section 4: JavaScript Development
 
+NOTE:
+While globally installing packages was commonplace within the JavaScript community for years, this has (thankfully) fallen out of favor for the most part.
+Here, the only two globally installed packages are those used by Emacs for code quality, inspection, and completion.
+I do not install any JavaScript build tooling globally, and do not recommend doing so.
+
+### NVM
+
+Using `nvm`, like `pyenv`, allows us to effectively manage multiple active node.js versions.
+
+#### Installation
+
+The [nodedev.sh script](#nodedevsh.script) installs [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) via [nvm](https://github.com/creationix/nvm).
+
+#### Usage
+
+To install Node (with its corresponding NPM version):
+
+    $ nvm install node  # installs the latest Node
+    $ nvm install 9.4  # installs Node at specified version (i.e., 9.4, 10.2, etc)
+
+To uninstall a Node version:
+
+    $ nvm uninstall 9.4
+
+To specify a default Node version to be used in any new shell:
+
+    $ nvm alias default 9.4
+
+To see all installed versions:
+
+    $ nvm ls  # see local
+    $ nvm ls-remote  # see remote
+
+In any directory, setting a version in a `.nvmrc` file and running `nvm use` will override the global default.
+
+### Tern
+
+### ESLint
+
+
 ## Section 5: Additional Languages
 
 ## Section 6: Big Data, AWS, and Heroku
