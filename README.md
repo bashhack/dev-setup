@@ -860,13 +860,17 @@ While many Scheme implementations are available, including Chicken, Racket, GNU 
 
 #### Installation
 
-[Common Lisp (SBCL)](http://www.sbcl.org/) is installed by [misclang.sh script](#misclangsh-script).
+[Steel Bank Common Lisp](http://www.sbcl.org/) is installed by [misclang.sh script](#misclangsh-script).
+
+Like Scheme, there are many implementations of Common Lisp to choose from. I opt for SBCL (out of Carnegie Melon) because of its speed, type inference, debugger, and robustness for production code. I do NOT recommend this for casual use - where I would instead suggest [CCL](https://ccl.clozure.com/).
 
 ### Ruby
 
 #### Installation
 
-[Rust](https://www.rust-lang.org/en-US/) is installed by [misclang.sh script](#misclangsh-script).
+[Ruby](https://www.ruby-lang.org/en/) is installed by [misclang.sh script](#misclangsh-script).
+
+Ruby is installed via [rbenv](https://github.com/rbenv/rbenv), a Ruby version manager like `nvm` suitable for handling multiple active versions and any installed gems.
 
 ## Section 6: Big Data, AWS, and Heroku
 
