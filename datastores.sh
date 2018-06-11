@@ -11,7 +11,7 @@ echo "------------------------------"
 echo "Installing ELK Stack (Elasticsearch, Logstash, Kibana)."
 echo "------------------------------"
 
-sudo apt install apt-transport-https nginx net-tools apache2-utils
+sudo apt install apt-transport-https nginx net-tools apache2-utils -y
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 sudo apt update
@@ -31,7 +31,7 @@ echo "------------------------------"
 echo "Installing Redis."
 echo "------------------------------"
 
-sudo apt install redis
+sudo apt install redis -y
 sudo systemctl daemon-reload
 sudo systemctl enable redis
 sudo systemctl start redis

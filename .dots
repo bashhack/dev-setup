@@ -7,6 +7,8 @@ function runDots() {
   # Keep-alive: update existing `sudo` time stamp until the script is done
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+  sudo apt install curl -y
+
   # Run setions based on command line arguments
   for ARG in "$@"
   do
