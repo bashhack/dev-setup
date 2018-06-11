@@ -1,25 +1,18 @@
 dots
 ============
 
-## Motivation
-
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dots` aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** to **automate the setup** of the following:
+Setting up a new development machine can be a frustrating experience - manual, laborious, and fraught with inefficiency. These setup scripts aim to simplify and automate the process, configuring my development environment with the tools I use in my professional and personal work:
 
 * **Linux system tools**: neofetch, tree, htop, etc
 * **Developer tools**: Spacemacs, Vim, bash, tab completion, curl, git, GNU core utils, etc
 * **Languages**: Python, Rust, Haskell, Scheme, etc
 * **Cloud services**: Amazon Web Services and Heroku
-* **Big data, AI/ML**: Apache Spark, MapReduce, etc
+* **Big data, AI/ML**: Apache Spark, Sci-Kit Learn, MapReduce, etc
 * **Common data stores**: PostgreSQL, Redis, and Elasticsearch
-* **Javascript development**: Node.js, ESLint, etc
-
-### But...I Don't Need All These Tools!
 
 **`dots` is geared to be more of an organized *reference* of various developer tools.**
 
-**You're *not* meant to install everything.**
-
-If you're interested in automation, `dots` provides a customizable [setup script](#single-setup-script).  There's really no one-size-fits-all solution for developers so you're encouraged to make tweaks to suit your needs.
+If you're interested in automation, `dots` provides a customizable [setup script](#single-setup-script). Tweak and adjust, as needed.
 
 [Credits](#credits): This repo builds on the awesome work from [Donne Martin](https://github.com/donnemartin), [Mathias Bynens](https://github.com/mathiasbynens) and [Nicolas Hery](https://github.com/nicolashery).
 
@@ -80,18 +73,13 @@ If you're interested in automation, `dots` provides a customizable [setup script
 
 * [Spark](#spark)
 * [MapReduce](#mapreduce)
-* [Awesome AWS](#awesome-aws-)
 * [AWS Account](#aws-account)
 * [AWS CLI](#aws-cli)
-* [SAWS](#saws)
 * [Boto](#boto)
 * [S3cmd](#s3cmd)
-* [S3DistCp](#s3distcp)
-* [S3-parallel-put](#s3-parallel-put)
 * [Redshift](#redshift)
 * [Kinesis](#kinesis)
 * [Lambda](#lambda)
-* [AWS Machine Learning](#aws-machine-learning)
 * [Heroku](#heroku)
 
 ## Section 7: Data Stores
