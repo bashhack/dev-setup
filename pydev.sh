@@ -31,6 +31,19 @@ pip install isort
 pip install importmagic
 pip install epc
 
+pip install jupyter
+pip install git+https://github.com/Calysto/calysto_hy.git
+python -m calysto_hy install
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install scikit-learn
+pip install scipy
+pip install bokeh
+pip install pyspark
+pip install mrjob
+
 echo ""
 echo "------------------------------"
 echo "Global Python version set"

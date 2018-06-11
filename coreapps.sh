@@ -24,11 +24,6 @@ sudo dpkg -i ripgrep_0.8.1_amd64.deb
 sudo apt install silversearcher-ag
 
 ## Step 3
-# Install devops tools
-# Heroku
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-
-## Step 4
 # Install system tools
 # neofetch
 sudo apt install neofetch -y
@@ -37,7 +32,7 @@ sudo apt install tree -y
 # htop
 sudo apt install htop -y
 
-## Step 5
+## Step 4
 # Install fonts
 ### source-code-pro
 FONT_HOME=~/.local/share/fonts
@@ -55,10 +50,10 @@ cd ~/nerd-fonts
 bash ./install.sh
 echo "Fonts successfully loaded"
 
-## Step 6
+## Step 5
 # Install browsers
 sudo snap install chromium
 
-## Step 7
+## Step 6
 # Install media players
 sudo snap install spotify

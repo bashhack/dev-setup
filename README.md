@@ -609,6 +609,11 @@ A language-agnostic HTML notebook application for Project Jupyter. Comprising of
 
 Both the Jupyter Notebook and the [Calysto Hy](https://github.com/Calysto/calysto_hy) kernel (for Hy language development) are installed in `pydev.sh`.
 
+If you prefer to intsall them separately, run:
+
+    $ pip install git+https://github.com/Calysto/calysto_hy.git
+    $ python -m calysto_hy install
+
 #### Usage
 
 For console-based development:
@@ -675,7 +680,6 @@ The [pydev.sh script](#pydevsh-script) installs matplotlib.  If you prefer to in
     $ pip install matplotlib
 
 #### Usage
-
 
 Refer to the following [Python Data Sciene Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/ccafda3da2b190f244867e9562edf3e4d6f5c883/notebooks/04.00-Introduction-To-Matplotlib.ipynb) by Jake VanderPlas.
 
@@ -1003,6 +1007,337 @@ Ruby is installed via [rbenv](https://github.com/rbenv/rbenv), a Ruby version ma
 I almost never write Ruby anymore, nor do I tend to need its REPL (run `irb`, if interested). However, it is installed and used as a dependency for other system requirements (i.e., `foreman`, `gulp-sass`, etc.).
 
 ## Section 6: Big Data, AWS, and Heroku
+
+### Spark
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/spark.png">
+  <br/>
+</p>
+
+Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs Spark locally. If you prefer to install it separately, run:
+
+    $ pip install pyspark
+
+#### Usage
+
+Run Spark locally:
+
+    $ pyspark
+
+For a demo, I've included a simple Jupyter notebook [pyspark notebook](#add-link-to-notebook) which, once run should finish with the result of PI.
+
+Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/emr/details/spark/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli), replacing `myKey` with the name of your keypair to SSH into your cluster:
+
+    $ aws emr create-cluster --name "Spark cluster" --release-label emr-5.14.0 --applications Name=Spark \
+    --ec2-attributes KeyName=myKey --instance-type m4.large --instance-count 3 --use-default-roles
+
+### MapReduce
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/mrjob.png">
+  <br/>
+</p>
+
+Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters such as AWS Elastic MapReduce (EMR).
+
+#### Installation
+
+The [pydev.sh script](#pydevsh-script) installs mrjob locally. If you prefer to install it separately, run:
+
+    $ pip install mrjob
+
+The [aws.sh script](#awssh-script) syncs the template `.mrjob.conf` file to your home folder.  Note running the aws.sh script will overwrite any existing `~/.mrjob.conf` file.  Update the config file with your credentials, keypair, region, and S3 bucket paths:
+
+```
+runners:
+  emr:
+    aws_access_key_id: YOURACCESSKEY
+    aws_secret_access_key: YOURSECRETKEY
+    aws_region: us-east-1
+    ec2_key_pair: YOURKEYPAIR
+    ec2_key_pair_file: ~/.ssh/YOURKEYPAIR.pem
+    ...
+    s3_scratch_uri: s3://YOURBUCKETSCRATCH
+    s3_log_uri: s3://YOURBUCKETLOG
+    ...
+```
+
+#### Usage
+
+NOTE: If we have a script `wordcount.py`:
+
+```
+    """The classic MapReduce job: count the frequency of words.
+    """
+    from mrjob.job import MRJob
+    import re
+
+    WORD_RE = re.compile(r"[\w']+")
+
+
+    class MRWordFreqCount(MRJob):
+
+        def mapper(self, _, line):
+            for word in WORD_RE.findall(line):
+                yield (word.lower(), 1)
+
+        def combiner(self, word, counts):
+            yield (word, sum(counts))
+
+        def reducer(self, word, counts):
+            yield (word, sum(counts))
+
+
+    if __name__ == '__main__':
+        MRWordFreqCount.run()
+```
+
+Using on locally:
+
+    $ python wordcount.py my_file.txt > count_output
+
+Using on EMR:
+
+    $ python wordcount.py my_file.txt -r emr > count_output
+
+### AWS Account
+
+To start using AWS, you first need to sign up for an account.
+
+#### Sign up for AWS
+
+When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS. You are charged only for the services that you use.  New users are eligible for 12 months of usage through the [AWS Free Tier](http://aws.amazon.com/free/).
+
+To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  Follow the on-screen instructions.  Part of the sign-up procedure involves receiving a phone call and entering a PIN using the phone keypad.  Note your AWS account ID.
+
+### AWS CLI
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_cli.png">
+  <br/>
+</p>
+
+The AWS Command Line Interface is a unified tool to manage AWS services, allowing you to control multiple AWS services from the command line and to automate them through scripts.
+
+#### Installation
+
+The [aws.sh script](#aws-script) installs the AWS CLI.  If you prefer to install it separately, run:
+
+    $ pip install awscli
+
+Run the following command to configure the AWS CLI:
+
+    $ aws configure
+
+Alternatively, the aws.sh script also syncs the template ```.aws/``` folder to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.aws/``` folder.  Update the config file with your credentials and location:
+
+```
+[default]
+region = us-east-1
+```
+
+```
+[default]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+```
+
+#### Usage
+
+Refer to the following [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/index.html).
+
+### Boto
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/boto.png">
+  <br/>
+</p>
+
+Boto is the official AWS SDK for Python.
+
+#### Installation
+
+The [aws.sh script](#aws-script) installs boto.  If you prefer to install it separately, run:
+
+    $ pip install boto
+
+Boto uses the same configuration as described in the [AWS CLI](#aws-cli) section.
+
+#### Usage
+
+To work with S3:
+
+```
+    import boto
+    s3 = boto.connect_s3()
+```
+
+To work with EC2:
+
+```
+    import boto.ec2
+    ec2 = boto.ec2.connect_to_region('us-east-1')
+```
+
+Create an S3 bucket and put an object in that bucket:
+
+```
+    import boto
+    import time
+    s3 = boto.connect_s3()
+    
+    bucket = s3.create_bucket(f'boto-demo-{int(time.time())}')
+    key = bucket.new_key('mykey')
+    key.set_contents_from_string("Hello world!")
+    
+    time.sleep(2)
+    
+    print(key.get_contents_as_string())
+    
+    key.delete()
+    
+    bucket.delete()
+```
+
+### S3cmd
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/s3cmd.png">
+  <br/>
+</p>
+
+S3cmd is written in Python, is open source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
+
+#### Installation
+
+The [aws.sh script](#awssh-script) installs s3cmd.  If you prefer to install it separately, run:
+
+    $ pip install s3cmd
+
+Running the following command will prompt you to enter your AWS access and AWS secret keys. To follow security best practices, make sure you are using an IAM account as opposed to using the root account.
+
+Run the following to manually configure:
+
+    $ s3cmd --configure
+
+Alternatively, the [aws.sh script](#awssh-script) also syncs the template ```.s3cfg``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.s3cfg``` file.  Update the config file with your credentials and location:
+
+```
+[Credentials]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+...
+bucket_location = US
+...
+gpg_passphrase = YOURPASSPHRASE
+```
+
+#### Usage
+
+The collection of [commands](http://s3tools.org/usage) is vast, but a few of the most useful are listed here.
+
+To list all buckets:
+
+    $ s3cmd ls
+
+To list the contents of the bucket:
+
+    $ s3cmd ls s3://my-bucket-name
+
+To download a file:
+
+    $ s3cmd get s3://my-bucket-name/myfile.txt myfile.txt
+
+To delete a file:
+
+    $ s3cmd del s3://my-bucket-name/myfile.txt
+
+To delete a bucket:
+
+    $ s3cmd del --recursive s3://my-bucket-name/
+
+To create a bucket:
+
+    $ s3cmd mb s3://my-bucket-name
+
+To list bucket disk usage (human readable):
+
+    $ s3cmd du -H s3://my-bucket-name/
+
+To sync local (source) to s3 bucket (destination):
+
+    $ s3cmd sync my-local-folder-path/ s3://my-bucket-name/
+
+To sync s3 bucket (source) to local (destination):
+
+    $ s3cmd sync s3://my-bucket-name/ my-local-folder-path/
+
+To do a dry-run (do not perform actual sync, but get information about what would happen):
+
+    $ s3cmd --dry-run sync s3://my-bucket-name/ my-local-folder-path/
+
+### Redshift
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_redshift.png">
+  <br/>
+</p>
+
+Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html).
+
+### Kinesis
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_kinesis.png">
+  <br/>
+</p>
+
+Kinesis streams data in real time with the ability to process thousands of data streams per second.
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before-you-begin.html).
+
+### Lambda
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashack/dev-setup-resources/master/res/aws_lambda.png">
+  <br/>
+</p>
+
+Lambda runs code in response to events, automatically managing compute resources.
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
+
+### Heroku
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/heroku.jpg">
+  <br/>
+</p>
+
+[Heroku](http://www.heroku.com/) is a Platform-as-a-Service (PaaS). One of the benefits of using and targeting Heroku for deployment is that it requires adherence to [12 Factor](http://www.12factor.net/). This methodology ultimately makes for scalable solutions and more loosely coupled applications/services (this is a good thing!).
+
+#### Installation
+
+The [aws.sh script](#awssh-script) installs the Heroku CLI.  If you prefer to install it separately, run:
+
+    $ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+#### Usage
+
+The [Heroku CLI Command Documentation](https://devcenter.heroku.com/articles/heroku-cli-commands) provides details on usage.
 
 ## Section 7: Data Stores
 
