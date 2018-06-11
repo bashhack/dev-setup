@@ -44,7 +44,7 @@ echo "------------------------------"
 
 pip install jupyter
 pip install git+https://github.com/Calysto/calysto_hy.git
-python -m calysto_hy install
+python -m calysto_hy install --user
 pip install numpy
 pip install pandas
 pip install matplotlib
