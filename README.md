@@ -201,7 +201,7 @@ Run the `linuxprep.sh` script:
 ### coreapps.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/apps.png">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/ubuntu.png">
   <br/>
 </p>
 
