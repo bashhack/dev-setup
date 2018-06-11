@@ -13,10 +13,10 @@ function runDots() {
     if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
       echo ""
       echo "-------------------------------"
-      echo "Syncing the dev-setup repo to your local machine."
+      echo "Syncing the dots repo to your local machine."
       echo "-------------------------------"
       echo ""
-      cd ~ && curl -#L https://github.com/bashhack/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh,pydev.sh,nodedev.sh,misclang.sh,aws.sh,datastores.sh}
+      cd ~ && curl -#L https://github.com/bashhack/dots/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,LICENSE,bootstrap.sh,linuxprep.sh,coreapps.sh,pydev.sh,nodedev.sh,misclang.sh,aws.sh,datastores.sh}
     fi
     if [ $ARG == "linuxprep" ] || [ $ARG == "all" ]; then
       # Run the linuxprep.sh script
@@ -25,7 +25,7 @@ function runDots() {
       echo "Updating Linux and installing utilities."
       echo "-------------------------------"
       echo ""
-      bash ./dev-setup/linuxprep.sh
+      bash ./dots/linuxprep.sh
     fi
     if [ $ARG == "coreapps" ] || [ $ARG == "all" ]; then
       # Run the coreapps.sh script
@@ -34,7 +34,7 @@ function runDots() {
       echo "Installing core applications."
       echo "-------------------------------"
       echo ""
-      bash ./dev-setup/coreapps.sh
+      bash ./dots/coreapps.sh
     fi
     if [ $ARG == "pydev" ] || [ $ARG == "all" ]; then
         # Run the pydev.sh script
@@ -43,7 +43,7 @@ function runDots() {
         echo "Installing Python dev tools."
         echo "-------------------------------"
         echo ""
-        bash ./dev-setup/pydev.sh
+        bash ./dots/pydev.sh
     fi
     if [ $ARG == "nodedev" ] || [ $ARG == "all" ]; then
         # Run the nodedev.sh script
@@ -52,7 +52,7 @@ function runDots() {
         echo "Installing Node dev tools."
         echo "-------------------------------"
         echo ""
-        bash ./dev-setup/nodedev.sh
+        bash ./dots/nodedev.sh
     fi
     if [ $ARG == "misclang" ] || [ $ARG == "all" ]; then
         # Run the misclang.sh script
@@ -61,7 +61,7 @@ function runDots() {
         echo "Installing miscellaneous programming languages."
         echo "-------------------------------"
         echo ""
-        bash ./dev-setup/misclang.sh
+        bash ./dots/misclang.sh
     fi
     if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
         # Run the aws.sh script
@@ -70,7 +70,7 @@ function runDots() {
         echo "Installing big data tools, AWS, and Heroku."
         echo "-------------------------------"
         echo ""
-        bash ./dev-setup/aws.sh
+        bash ./dots/aws.sh
     fi
     if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
         # Run the datastores.sh script
@@ -79,12 +79,13 @@ function runDots() {
         echo "Installing datastores."
         echo "-------------------------------"
         echo ""
-        bash ./dev-setup/datastores.sh
+        bash ./dots/datastores.sh
     fi
   done
 
   echo "-------------------------------"
-  echo "Completed running .dots, restart your computer to ensure all updates take effect"
+  echo "Completed running .dots, restart your computer to ensure all updates take effect."
+  echo "IMPORTANT: Open the POST-INSTALL GUIDE to complete setup after reboot."
   echo "-------------------------------"
 }
 

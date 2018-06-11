@@ -14,6 +14,7 @@ function doIt() {
 	    --exclude='pydev.sh' \
 	    --exclude='nodedev.sh' \
 	    --exclude='misclang.sh' \
+      --exclude='aws.sh' \
 	    --exclude='datastores.sh' \
 	    -avh --no-perms . ~;
     source ~/.bash_profile;
