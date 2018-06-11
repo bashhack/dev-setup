@@ -8,11 +8,16 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo ""
 echo "------------------------------"
-echo "Installing AWS CLI and other tools"
+echo "Installing AWS CLI."
 echo "------------------------------"
+
 pip install awscli
 pip install boto
 pip install s3cmd
 
-# Heroku
+echo ""
+echo "------------------------------"
+echo "Installing Heroku."
+echo "------------------------------"
+
 wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh

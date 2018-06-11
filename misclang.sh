@@ -6,17 +6,33 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Rust
+echo ""
+echo "------------------------------"
+echo "Installing Rust."
+echo "------------------------------"
+
 curl https://sh.rustup.rs -sSf | sh
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.exports
 
-# Haskell
+echo ""
+echo "------------------------------"
+echo "Installing Haskell."
+echo "------------------------------"
+
 curl -sSL https://get.haskellstack.org/ | sh
 
-# Java
+echo ""
+echo "------------------------------"
+echo "Installing Java."
+echo "------------------------------"
+
 sudo apt install openjdk-8-jdk -y
 
-# Clojure
+echo ""
+echo "------------------------------"
+echo "Installing Clojure and Leiningen."
+echo "------------------------------"
+
 sudo apt install leiningen -y
 # TODO: Add to ~/.lein/profiles.clj
 # {:repl {:plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
@@ -24,16 +40,28 @@ sudo apt install leiningen -y
 #         :dependencies [[alembic "0.3.2"]
 #                        [org.clojure/tools.nrepl "0.2.12"]]}}
 
-# Scheme
+echo ""
+echo "------------------------------"
+echo "Installing Chez Scheme."
+echo "------------------------------"
+
 git clone git@github.com:cisco/ChezScheme.git
 cd ~/ChezScheme && bash ./configure
 sudo make install
 cd $HOME
 
-# Common Lisp
+echo ""
+echo "------------------------------"
+echo "Installing Steel Bank Common Lisp."
+echo "------------------------------"
+
 sudo apt install sbcl -y
 
-# Ruby
+echo ""
+echo "------------------------------"
+echo "Installing Ruby."
+echo "------------------------------"
+
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.exports
 echo 'eval "$(rbenv init -)"' >> ~/.exports
