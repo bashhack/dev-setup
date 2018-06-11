@@ -50,7 +50,7 @@ mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
      'https://github.com/adobe-fonts/source-code-pro.git' \
      "$FONT_HOME/adobe-fonts/source-code-pro" && \
      fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro")
-git clone git@github.com:ryanoasis/nerd-fonts.git
+git clone https://github.com/ryanoasis/nerd-fonts.git
 cd ~/nerd-fonts
 bash ./install.sh
 

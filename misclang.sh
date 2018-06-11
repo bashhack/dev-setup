@@ -40,7 +40,7 @@ echo "------------------------------"
 echo "Installing Chez Scheme."
 echo "------------------------------"
 
-git clone git@github.com:cisco/ChezScheme.git
+git clone https://github.com/cisco/ChezScheme.git
 cd ~/ChezScheme && bash ./configure
 sudo make install
 cd $HOME
