@@ -16,6 +16,7 @@ sudo apt install emacs25 -y
 mv .emacs.d .emacs.d.bak
 mv .emacs .emacs.bak
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+cp init/dogemacs.txt ~/.emacs.d/core/banners/
 
 echo ""
 echo "------------------------------"
