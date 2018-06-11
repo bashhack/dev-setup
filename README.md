@@ -968,7 +968,7 @@ To add [Devcards](https://github.com/bhauman/devcards) support, add it as a depe
 
 [Scheme](https://cisco.github.io/ChezScheme/) is installed by [misclang.sh script](#misclangsh-script).
 
-While many Scheme implementations are available, including Chicken, Racket, GNU Guile, etc., I opt for and recommend Chez Scheme written by [R. Kent Dybvig](https://www.cs.indiana.edu/~dyb/). For those familiar with the history of Chez Scheme - most notably, its relationship to CISCO - fear not, Chez Scheme is now open source. No need to shell out $4000 anymore to enjoy the world's fastest Scheme implementation and what is, perhaps, the most beautiful compiler ever written.
+While many Scheme implementations are available, including Chicken, Racket, GNU Guile, etc., I opt for and recommend Chez Scheme written by [R. Kent Dybvig](https://www.cs.indiana.edu/~dyb/). For those familiar with the history of Chez Scheme - most notably, its relationship to CISCO - fear not, Chez Scheme is now open-source. No need to shell out $4000 anymore to enjoy the world's fastest Scheme implementation and what is, perhaps, the most beautiful compiler ever written.
 
 #### Usage
 
@@ -1211,7 +1211,7 @@ Create an S3 bucket and put an object in that bucket:
   <br/>
 </p>
 
-S3cmd is written in Python, is open source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
+S3cmd is written in Python, is open-source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
 
 #### Installation
 
@@ -1341,17 +1341,64 @@ The [Heroku CLI Command Documentation](https://devcenter.heroku.com/articles/her
 
 ## Section 7: Data Stores
 
+### Elasticsearch
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/elasticsearch.png">
+  <br/>
+</p>
+
+Distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. In conjunction with the data-collection and log-parsing engine, Logstash, and the analytics platform, Kibana, it forms the Elastic Stack (or ELK stack).
+
+#### Installation
+
+[Elasticsearch](https://github.com/elastic/elasticsearch), [Kibana](https://github.com/elastic/kibana), and [Logstash](https://github.com/elastic/logstash) are all installed via the [datastores.sh script](#datastoressh-script).
+
+#### Configuration
+
+Setting up the ELK stack does require work after installation, though all dependencies required are included in the system scripts here. For specifics on edits and alterations necessary for a working configuration, see [Dots Post-Install Guide](https://raw.githubusercontent.com/bashhack/dots/master/POST_INSTALL.md).
+
+#### Usage
+
+To get started, refer to the [Elasticsearch Reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html).
+
 ### PostgreSQL
 
-[Coming Soon]
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/postgresql.png">
+  <br/>
+</p>
+
+An ACID-compliant, transactional, object-relational database that is free and open-source.
+
+#### Installation
+
+[PostgreSQL](https://www.postgresql.org/docs/10/static/index.html) is installed via the [datastores.sh script](#datastoressh-script).
+
+#### Configuration
+
+For complete configuration, refer to the [Dots Post-Install Guide](https://raw.githubusercontent.com/bashhack/dots/master/POST_INSTALL.md).
+
+#### Usage
+
+Refer to the [Official PostgreSQL Tutorial](https://www.postgresql.org/docs/10/static/tutorial.html).
 
 ### Redis
 
-[Coming Soon]
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/redis.png">
+  <br/>
+</p>
 
-### Elasticsearch
+Fast, in-memory data structore store, used as a database, cache, and message broker. It has built-in replication, LRU eviction, transactions, on-disk persistence, and high availability support.
 
-[Coming Soon]
+#### Installation
+
+[Redis](https://redis.io/documentation) is installed via the [datastores.sh script](#datastoressh-script).
+
+#### Usage
+
+For a list of available commands, see [Redis Commands](https://redis.io/commands). Additional resources for understanding the Redis store can be found in the [Redis Data Types Intro](https://redis.io/topics/data-types-intro).
 
 ## Section 8: Misc
 
