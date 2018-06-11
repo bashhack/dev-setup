@@ -1,5 +1,5 @@
 dots
-============
+=====
 
 Setting up a new development machine can be a frustrating experience - manual, laborious, and fraught with inefficiency. These setup scripts aim to simplify and automate the process, configuring my development environment with the tools I use in my professional and personal work:
 
@@ -188,7 +188,7 @@ You could also use `~/.extras` to override settings, functions, and aliases from
 ### linuxprep.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tux.jpg">
+  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tux.png">
   <br/>
 </p>
 
