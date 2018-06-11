@@ -152,11 +152,6 @@ The following discussions describe in greater detail what is executed when runni
 
 ### bootstrap.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/commands.png">
-  <br/>
-</p>
-
 The `bootstrap.sh` script will sync the `dots` repo to your local home directory.  This will include customizations for Spacemacs, Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
 
 #### Running with Git
@@ -187,11 +182,6 @@ You could also use `~/.extras` to override settings, functions, and aliases from
 
 ### linuxprep.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tux.png">
-  <br/>
-</p>
-
 Run the `linuxprep.sh` script:
 
     $ ./linuxprep.sh
@@ -200,11 +190,6 @@ Run the `linuxprep.sh` script:
 
 ### coreapps.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/ubuntu.png">
-  <br/>
-</p>
-
 Some of the apps installed by the `coreapps.sh` script include: Chromium, Spotify, fonts, system monitoring, Emacs, Vim, search tools (i.e., SilverSearcher, RipGrep), etc.
 
 Run the `coreapps.sh` script:
@@ -212,11 +197,6 @@ Run the `coreapps.sh` script:
     $ ./coreapps.sh
 
 ### pydev.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/python.png">
-  <br/>
-</p>
 
 This will install [pyenv](#pyenv), [pipenv](#pipenv) and associated packages.  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
 
@@ -228,11 +208,6 @@ Run the `pydev.sh` script:
 
 ### nodedev.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/nodejs.png">
-  <br/>
-</p>
-
 To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 
     $ ./nodedev.sh
@@ -240,11 +215,6 @@ To set up a JavaScript web development environment, Run the `nodedev.sh` script:
 [Section 4: JavaScript Development](#section-4-javascript-development) describes the installed packages and usage.
 
 ### misclang.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/misclangs.png">
-  <br/>
-</p>
 
 To set up a development environment to work additional languages (including Rust, Scheme, Clojure, Haskell, etc.), run the `misclang.sh` script:
 
@@ -254,11 +224,6 @@ To set up a development environment to work additional languages (including Rust
 
 ### aws.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws.png">
-  <br/>
-</p>
-
 To set up a development environment to work with Spark, Hadoop MapReduce, and Amazon Web Services, run the `aws.sh` script:
 
     $ ./aws.sh
@@ -266,11 +231,6 @@ To set up a development environment to work with Spark, Hadoop MapReduce, and Am
 [Section 6: Big Data, AWS, and Heroku](#section-6-big-data-aws-and-heroku) describes the installed packages and usage.
 
 ### datastores.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/datastores.png">
-  <br/>
-</p>
 
 To set up common data stores, run the `datastores.sh` script:
 
@@ -281,11 +241,6 @@ To set up common data stores, run the `datastores.sh` script:
 ## Section 2: General Apps and Tools
 
 ### Git
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/git.png">
-  <br/>
-</p>
 
 What's a developer without [Git](http://git-scm.com/)?
 
@@ -319,19 +274,13 @@ To push code to your GitHub repositories, we're going to make use of [Krypton](h
 
 ### Tmux
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tmux.png">
-  <br/>
-</p>
+[Coming Soon]
 
 ### Build Tools
 
-### Terminal Customization
+[Coming Soon]
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/terminal.png">
-  <br/>
-</p>
+### Terminal Customization
 
 Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
 
@@ -340,11 +289,6 @@ Since we spend so much time in the terminal, we should try to make it a more ple
 The [bootstrap.sh script](#bootstrapsh-script) contains terminal customizations.
 
 ### Vim
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/vim.png">
-  <br/>
-</p>
 
 Although Emacs is our main editor, some basic [Vim](http://www.vim.org/) configuration when you need it goes a long way .
 
@@ -358,11 +302,6 @@ The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
 
 ### Emacs
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/emacs.png">
-  <br/>
-</p>
-
 #### Installation
 
 The [linuxprep.sh script](#linuxprepsh-script) will install `emacs`.
@@ -375,11 +314,6 @@ Notably, `dots` favors utilization of [Spacemacs](http://spacemacs.org/) for cus
 
 ### AG (Silver Searcher)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/silversearcher.png">
-  <br/>
-</p>
-
 #### Installation
 
 The [linuxprep.sh script](#linuxprepsh-script) will install `ag`.
@@ -389,11 +323,6 @@ The [linuxprep.sh script](#linuxprepsh-script) will install `ag`.
 No additional setup required, it's like `ack` but much faster and written in C. Under the hood, it uses `Pthreads` enabling multi-processing (i.e., using multiple CPU cores).
 
 ### RipGrep
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/ripgrep.png">
-  <br/>
-</p>
 
 #### Installation
 
@@ -435,21 +364,11 @@ Search everything except JavaScript files:
 
 ### Neofetch
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/neofetch.png">
-  <br/>
-</p>
-
 Highly configurable shell bling to display system info - in other words, a better `screenfetch`.
 
 To disable `neofetch` on terminal startup, simply comment out `neofetch` from [.extras](https://raw.githubusercontent.com/bashhack/dots/master/.extras).
 
 ### Tree
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/tree.png">
-  <br/>
-</p>
 
 A recursive directory listing program for Unix systems, outputting a depth-indented listing of files.
 
@@ -463,11 +382,6 @@ Use `tree` to output all visible files and directories, and `tree -a` to include
 
 ### HTOP
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/htop.png">
-  <br/>
-</p>
-
 A simple, interactive system monitor for process viewing and management.
 
 #### Installation
@@ -480,30 +394,15 @@ Evoke using `htop` command.
 
 ### Fonts
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/fonts.png">
-  <br/>
-</p>
-
 While I don't have a need for much font customization, I do find [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/) quite visually appealing and works especially well with Spacemacs.
 
 Additionally, I tend to rely on the mega font pack [Nerd Fonts](https://nerdfonts.com/) for supporting certain features in Spacemacs, Vim, and tmux, as well as general system typography and iconograpy.
 
 ### Chromium
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/chromium.png">
-  <br/>
-</p>
-
 Firefox is the default on Ubuntu 18.04, but installation of Chromium is useful for debugging and additional browser features.
 
 ### Spotify
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/spotify.png">
-  <br/>
-</p>
 
 Essential listening.
 Feel free to follow me [here](https://open.spotify.com/user/laughtonm?si=6TXPoQ09TEmT9h_A-k7_XQ).
@@ -586,11 +485,6 @@ Deactivate virtual environment:
 
 ### Jupyter Notebook
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/jupyter.png">
-  <br/>
-</p>
-
 A language-agnostic HTML notebook application for Project Jupyter. Comprising of a web application and notebook documents, [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/index.html) provides a computing environment that can be used for developing, documenting, and executing code, as well as communicating the results.
 
 #### Installation
@@ -616,11 +510,6 @@ For notebook-based development:
 
 ### NumPy
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/numpy.png">
-  <br/>
-</p>
-
 NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
 
 #### Installation
@@ -634,11 +523,6 @@ The [pydev.sh script](#pydevsh-script) installs NumPy.  If you prefer to install
 Refer to the following [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/02.00-Introduction-to-NumPy.ipynb) by Jake VanderPlas.
 
 ### Pandas
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/pandas.png">
-  <br/>
-</p>
 
 Pandas is a software library written for data manipulation and analysis in Python. Offers data structures and operations for manipulating numerical tables and time series.
 
@@ -654,11 +538,6 @@ Refer to the following [Python Data Science Handbook](https://github.com/jakevdp
 
 ### Matplotlib
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/matplotlib.png">
-  <br/>
-</p>
-
 Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
 
 #### Installation
@@ -672,11 +551,6 @@ The [pydev.sh script](#pydevsh-script) installs matplotlib.  If you prefer to in
 Refer to the following [Python Data Sciene Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/blob/ccafda3da2b190f244867e9562edf3e4d6f5c883/notebooks/04.00-Introduction-To-Matplotlib.ipynb) by Jake VanderPlas.
 
 ### Seaborn
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/seaborn.png">
-  <br/>
-</p>
 
 Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
 
@@ -692,11 +566,6 @@ Refer to the following [Python Data Sciene Handbook](https://github.com/jakevdp/
 
 ### Scikit-learn
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/scikitlearn.png">
-  <br/>
-</p>
-
 Scikit-learn adds Python support for efficient versions of a large number of common machine learning algorithms. It has a clean, uniform, and streamlined API, and great documentation.
 
 #### Installation
@@ -711,11 +580,6 @@ Refer to the following [Python Data Science Handbook](https://github.com/jakevdp
 
 ### SciPy
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/scipy.png">
-  <br/>
-</p>
-
 SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
 
 #### Installation
@@ -729,11 +593,6 @@ The [pydev.sh script](#pydevsh-script) installs SciPy.  If you prefer to install
 Refer to the following for information and examples: [SciPy Documentation](https://docs.scipy.org/doc/scipy/reference/)
 
 ### Bokeh
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/bokeh.png">
-  <br/>
-</p>
 
 Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, but also deliver this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
 
@@ -998,11 +857,6 @@ I almost never write Ruby anymore, nor do I tend to need its REPL (run `irb`, if
 
 ### Spark
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/spark.png">
-  <br/>
-</p>
-
 Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
 
 #### Installation
@@ -1025,11 +879,6 @@ Spark is also supported on AWS Elastic MapReduce as described [here](https://aws
     --ec2-attributes KeyName=myKey --instance-type m4.large --instance-count 3 --use-default-roles
 
 ### MapReduce
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/mrjob.png">
-  <br/>
-</p>
 
 Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters such as AWS Elastic MapReduce (EMR).
 
@@ -1105,11 +954,6 @@ To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  
 
 ### AWS CLI
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_cli.png">
-  <br/>
-</p>
-
 The AWS Command Line Interface is a unified tool to manage AWS services, allowing you to control multiple AWS services from the command line and to automate them through scripts.
 
 #### Installation
@@ -1140,11 +984,6 @@ aws_secret_access_key = YOURSECRETKEY
 Refer to the following [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/index.html).
 
 ### Boto
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/boto.png">
-  <br/>
-</p>
 
 Boto is the official AWS SDK for Python.
 
@@ -1193,11 +1032,6 @@ Create an S3 bucket and put an object in that bucket:
 ```
 
 ### S3cmd
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/s3cmd.png">
-  <br/>
-</p>
 
 S3cmd is written in Python, is open-source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
 
@@ -1271,11 +1105,6 @@ To do a dry-run (do not perform actual sync, but get information about what woul
 
 ### Redshift
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_redshift.png">
-  <br/>
-</p>
-
 Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
 
 #### Setup
@@ -1283,11 +1112,6 @@ Redshift is a fast data warehouse built on top of technology from massive parall
 Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html).
 
 ### Kinesis
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/aws_kinesis.png">
-  <br/>
-</p>
 
 Kinesis streams data in real time with the ability to process thousands of data streams per second.
 
@@ -1297,11 +1121,6 @@ Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before
 
 ### Lambda
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashack/dev-setup-resources/master/res/aws_lambda.png">
-  <br/>
-</p>
-
 Lambda runs code in response to events, automatically managing compute resources.
 
 #### Setup
@@ -1309,11 +1128,6 @@ Lambda runs code in response to events, automatically managing compute resources
 Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
 
 ### Heroku
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/heroku.jpg">
-  <br/>
-</p>
 
 [Heroku](http://www.heroku.com/) is a Platform-as-a-Service (PaaS). One of the benefits of using and targeting Heroku for deployment is that it requires adherence to [12 Factor](http://www.12factor.net/). This methodology ultimately makes for scalable solutions and more loosely coupled applications/services (this is a good thing!).
 
@@ -1331,11 +1145,6 @@ The [Heroku CLI Command Documentation](https://devcenter.heroku.com/articles/her
 
 ### Elasticsearch
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/elasticsearch.png">
-  <br/>
-</p>
-
 Distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. In conjunction with the data-collection and log-parsing engine, Logstash, and the analytics platform, Kibana, it forms the Elastic Stack (or ELK stack).
 
 #### Installation
@@ -1352,11 +1161,6 @@ To get started, refer to the [Elasticsearch Reference](https://www.elastic.co/gu
 
 ### PostgreSQL
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/postgresql.png">
-  <br/>
-</p>
-
 An ACID-compliant, transactional, object-relational database that is free and open-source.
 
 #### Installation
@@ -1372,11 +1176,6 @@ For complete configuration, refer to the [Dots Post-Install Guide](https://raw.g
 Refer to the [Official PostgreSQL Tutorial](https://www.postgresql.org/docs/10/static/tutorial.html).
 
 ### Redis
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/bashhack/dev-setup-resources/master/res/redis.png">
-  <br/>
-</p>
 
 Fast, in-memory data structore store, used as a database, cache, and message broker. It has built-in replication, LRU eviction, transactions, on-disk persistence, and high availability support.
 
