@@ -24,16 +24,24 @@ pyenv global 3.6.5
 
 echo ""
 echo "------------------------------"
+echo "Installing Pipsi."
+echo "------------------------------"
+
+pip install virtualenv
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+
+echo ""
+echo "------------------------------"
 echo "Installing Python code-quality packages."
 echo "------------------------------"
 
-pip install python-language-server
-pip install pyls-sort
-pip install pyls-mypy
-pip install flake8
-pip install yapf
-pip install autoflake
-pip install isort
+pipsi install python-language-server
+pipsi install pyls-sort
+pipsi install pyls-mypy
+pipsi install flake8
+pipsi install yapf
+pipsi install autoflake
+pipsi install isort
 pip install importmagic
 pip install epc
 

@@ -8,6 +8,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo ""
 echo "------------------------------"
+echo "Installing Hy."
+echo "------------------------------"
+
+pipsi install hy
+
+echo ""
+echo "------------------------------"
 echo "Installing Rust."
 echo "------------------------------"
 
