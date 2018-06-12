@@ -20,6 +20,7 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 pyenv install 3.6.5
 pyenv install 3.7-dev
 pyenv install 3.8-dev
+pyenv install anaconda3-5.2.0
 pyenv global 3.6.5
 
 echo ""
@@ -61,4 +62,4 @@ pip install scikit-learn
 pip install scipy
 pip install bokeh
 pip install pyspark
-pip install mrjob
+pipsi install mrjob
