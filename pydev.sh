@@ -36,6 +36,7 @@ echo "------------------------------"
 echo "Installing Python code-quality packages."
 echo "------------------------------"
 
+pipsi install pipenv
 pipsi install python-language-server
 pipsi install pyls-sort
 pipsi install pyls-mypy
