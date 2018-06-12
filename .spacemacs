@@ -73,6 +73,7 @@ values."
      html
      javascript
      latex
+     lsp
      markdown
      (python :variables
              python-backend 'lsp
