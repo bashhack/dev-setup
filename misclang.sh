@@ -11,6 +11,8 @@ echo "------------------------------"
 echo "Installing Hy."
 echo "------------------------------"
 
+. ~/.exports
+. ~/.bash_profile
 pipsi install hy
 
 echo ""
