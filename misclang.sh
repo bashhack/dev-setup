@@ -30,6 +30,7 @@ echo "------------------------------"
 echo "Installing Haskell."
 echo "------------------------------"
 
+. ~/.bash_profile
 curl -sSL https://get.haskellstack.org/ | sh
 
 echo ""
@@ -68,15 +69,16 @@ echo "------------------------------"
 echo "Installing Ruby."
 echo "------------------------------"
 
+. ~/.bash_profile
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.exports
 echo 'eval "$(rbenv init -)"' >> ~/.exports
-. ~/.bashrc
 
+. ~/.bash_profile
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.exports
-. ~/.bashrc
 
+. ~/.bash_profile
 rbenv install 2.5.1
 rbenv global 2.5.1
 ruby -v
