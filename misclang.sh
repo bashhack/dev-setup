@@ -14,6 +14,8 @@ echo "------------------------------"
 . ~/.exports
 . ~/.bash_profile
 pip install hy
+pip install git+https://github.com/Calysto/calysto_hy.git
+python -m calysto_hy install --user
 
 echo ""
 echo "------------------------------"

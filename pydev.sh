@@ -48,10 +48,8 @@ pip install epc
 
 echo ""
 echo "------------------------------"
-echo "Installing Python data science and AI/ML packages."
+echo "Installing Python data science packages."
 echo "------------------------------"
 
 pip install jupyter
-pip install git+https://github.com/Calysto/calysto_hy.git
-python -m calysto_hy install --user
 pip install mrjob
