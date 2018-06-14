@@ -13,7 +13,7 @@ echo "------------------------------"
 
 . ~/.exports
 . ~/.bash_profile
-pipsi install hy
+pip install hy
 
 echo ""
 echo "------------------------------"

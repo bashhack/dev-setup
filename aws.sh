@@ -11,9 +11,9 @@ echo "------------------------------"
 echo "Installing AWS CLI."
 echo "------------------------------"
 
-pipsi install awscli
-pipsi install boto
-pipsi install s3cmd
+pip install awscli
+pip install boto
+pip install s3cmd
 
 echo ""
 echo "------------------------------"
