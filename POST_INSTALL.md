@@ -113,3 +113,7 @@ Log in as new user (should be same as sys user):
 Test new config:
 
     $ psql -d dbname
+
+## Python Machine Learning and Data Science Environment
+
+A basic ML/AI environment for Python can be easily created using the `Pipfile` in `dots/inits/ml_ai/Pipfile`:
