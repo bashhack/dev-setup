@@ -27,8 +27,8 @@ pyenv global 3.6.5
 # echo "Installing Pipsi."
 # echo "------------------------------"
 
-# pip install virtualenv
-# curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+pip install virtualenv
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
 
 echo ""
 echo "------------------------------"
@@ -54,12 +54,12 @@ echo "------------------------------"
 pip install jupyter
 pip install git+https://github.com/Calysto/calysto_hy.git
 python -m calysto_hy install --user
-pip install numpy
-pip install pandas
-pip install matplotlib
-pip install seaborn
-pip install scikit-learn
-pip install scipy
-pip install bokeh
-pip install pyspark
+# pip install numpy
+# pip install pandas
+# pip install matplotlib
+# pip install seaborn
+# pip install scikit-learn
+# pip install scipy
+# pip install bokeh
+# pip install pyspark
 pip install mrjob
