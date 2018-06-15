@@ -11,6 +11,7 @@ echo "------------------------------"
 echo "Installing AWS CLI."
 echo "------------------------------"
 
+. ~/.bash_profile
 pip install awscli
 pip install boto
 pip install s3cmd
