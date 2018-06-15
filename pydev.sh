@@ -54,3 +54,10 @@ echo "------------------------------"
 
 pip install jupyter
 pip install mrjob
+
+echo ""
+echo "------------------------------"
+echo "Installing pywal for theming."
+echo "------------------------------"
+
+pip install pywal
