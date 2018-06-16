@@ -12,7 +12,8 @@ echo "Installing Vim and Emacs."
 echo "------------------------------"
 
 sudo apt install vim -y
-sudo apt install emacs25 -y
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt install emacs26 -y
 mv .emacs.d .emacs.d.bak
 mv .emacs .emacs.bak
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -43,6 +44,7 @@ echo "Installing system fonts."
 echo "------------------------------"
 
 FONT_HOME=~/.local/share/fonts
+sudo apt install fonts-inconsolata -y
 echo "Installing fonts at $PWD to $FONT_HOME"
 mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
 (git clone \
