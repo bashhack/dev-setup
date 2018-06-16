@@ -115,6 +115,7 @@ sudo make install
 cd ~
 
 # TODO: make script executable for chmod +x bar.sh spoty.sh
+git clone https://www.github.com/Airblader/i3 i3-gaps
 cd i3-gaps/
 autoreconf --force --install
 rm -rf build/
