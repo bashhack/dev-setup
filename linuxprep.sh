@@ -107,11 +107,7 @@ sudo apt install compton -y
 sudo apt install unifont -y
 sudo apt install fonts-font-awesome -y
 sudo apt install ranger -y
-
-git clone https://github.com/bashhack/st.git
-cd st
-sudo make clean install
-cd ~
+sudo apt install terminator -y
 
 git clone --recursive https://github.com/jaagr/polybar
 mkdir polybar/build
@@ -130,9 +126,9 @@ make
 sudo make install
 cd ~
 
-cp -r init/i3/config ~/.config/i3/
+mkdir -p ~/.config/i3/ && cp -r init/i3/config ~/.config/i3/
 cp -r init/i3/spoty.sh ~/.config/i3/
 cp -r init/i3/bar.sh ~/.config/i3/
-cp -r init/polybar/config ~/.config/polybar/
-cp -r init/vapor.jpg ~/Pictures/
-cp -r init/rofi/config ~/.config/rofi/
+mkdir -p ~/.config/polybar/ && cp -r init/polybar/config ~/.config/polybar/
+mkdir -p ~/.config/rofi/ && cp -r init/rofi/config ~/.config/rofi/
+cp -r init/walls ~/Pictures/

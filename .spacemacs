@@ -87,7 +87,6 @@ values."
      sql
      yaml
      ;; Misc
-     nlinum
      ;; Source control
      git
      version-control

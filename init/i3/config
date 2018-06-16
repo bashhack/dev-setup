@@ -165,7 +165,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id feh --bg-scale ~/Pictures/vapor.jpg
+exec --no-startup-id wal -i ~/Pictures/walls/Gilmore_Wallpaper_3.jpg
+# exec --no-startup-id feh --bg-scale ~/Pictures/walls/Gilmore_Wallpaper_3.jpg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
