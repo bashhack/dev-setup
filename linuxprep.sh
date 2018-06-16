@@ -125,8 +125,8 @@ make
 sudo make install
 cd ~
 
-cp init/i3/config ~/.config/i3/
-cp init/i3/spoty.sh ~/.config/i3/
-cp init/i3/bar.sh ~/.config/i3/
-cp init/polybar/config ~/.config/polybar/
-cp init/vapor.jpg ~/Pictures/
+cp -r init/i3/config ~/.config/i3/
+cp -r init/i3/spoty.sh ~/.config/i3/
+cp -r init/i3/bar.sh ~/.config/i3/
+cp -r init/polybar/config ~/.config/polybar/
+cp -r init/vapor.jpg ~/Pictures/
